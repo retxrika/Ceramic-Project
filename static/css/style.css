@@ -1,0 +1,671 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+/* @font-face {
+    font-family: 'DINPro-CondensedMedium';
+    src: url("../fonts/bf27039ecba4e6511abddd84122a8aac.eot") format("truetype");
+} */
+
+@font-face { 
+    font-family: "DINPro-CondensedMedium";
+    src: url("../fonts/DINProCondensedRegular/DINProCondensedRegular.eot");
+    src: url("../fonts/DINProCondensedRegular/DINProCondensedRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/DINProCondensedRegular/DINProCondensedRegular.woff") format("woff"),
+    url("../fonts/DINProCondensedRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* @font-face {
+    font-family: 'fontbf27039ecba4e6511abddd84122a8aac';
+        
+        src:    url('https://nomail.com.ua/files/eot/bf27039ecba4e6511abddd84122a8aac.eot?#iefix') format('embedded-opentype'),
+                url('https://nomail.com.ua/files/woff/bf27039ecba4e6511abddd84122a8aac.woff') format('woff'),
+                url('https://nomail.com.ua/files/woff2/bf27039ecba4e6511abddd84122a8aac.woff2') format('woff2');
+    }
+    
+    @font-face { font-family: 'DINPro-CondensedMedium';  src: local('DINPro-CondensedMedium'), url('https://nomail.com.ua/files/woff/bf27039ecba4e6511abddd84122a8aac.woff') format('woff'); } */    
+
+/* base.html */
+
+/* Основной контейнер */
+
+.container-fluid {
+    width: 950px;
+    margin: 0 auto;
+}
+
+.container-fluid-top {
+    width: 1250px;
+    margin: 0 auto;
+}
+
+
+/* Верхняя полоска */
+
+.top {
+    background-color: #569192;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.top-info {
+    align-items: center;
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+    color: #ffffff;
+}
+
+.contacts-top {
+    display: flex;
+    align-items: center;
+}
+
+.icon-top {
+    margin-left: 5px;
+}
+
+.number {
+    font-family: 'DINPro-CondensedMedium';
+    font-weight: 550;
+}
+
+.text-top {
+    font-family: 'DINPro-CondensedMedium';
+    font-weight: 100;  
+}
+
+
+/* Корзина + контакты */
+
+.cart {
+    padding-top: 7px;
+    /* display: flex; */
+    /* align-items: center; */
+}
+
+.cart-wrap {
+    display: flex;
+    align-items: center;
+    margin-left:auto;
+}
+
+.cart-wrap div {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.len-cart-block {
+    width: 21px;
+    height: 21px;
+    background-color: #FF4A4A;
+    border-radius: 50%;
+}
+
+.len-cart-block span {
+    margin: 0 auto;
+    color: white;
+    font-family: 'DINPro-CondensedMedium';
+    font-size: 15px;
+}
+
+#header-scrolled {
+    display: none;
+}
+
+.contact-cart-block {
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.contact-inner {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #287AFA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-inner:hover {
+    cursor: pointer;
+    transition: 0.5s;
+    background-color: #0456da;
+}
+
+.contact-wrapper {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.сart-inner {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.cart-len {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    background: #E94B35;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-wrapper {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #b1b1b1 1px solid;
+    border-radius: 4px;
+}
+
+.cart-wrapper:hover {
+    transition: 0.3s;
+    cursor: pointer;
+    background: #d2d2d2;
+}
+
+/* Логотип + меню */
+.logo-menu {
+    padding-top: 7px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.menu {
+    display: flex;
+    
+}
+
+.menu-link {
+    padding-left: 10px;
+    color: #636363;
+    font-family: 'DINPro-CondensedMedium';
+    font-size: 23px;
+}
+
+.menu-link:hover {
+    color: black;  
+    transition: 0.3s;  
+}
+
+.separator {
+    padding-left: 10px;
+    color: black;
+    font-family: 'DINPro-CondensedMedium';
+    font-size: 22px;
+}
+
+
+#top_nav {
+    position: sticky;
+    top: 0;
+    background-color: #F0F7FB;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+/* home.html */
+
+/* Большой блок с фото на главной странице*/
+
+.wrap {
+    width: 100%;
+}
+
+.slider-container {
+    overflow: hidden;
+}
+
+.slider-track {
+    display: flex;
+    transition: 2s;
+    /* object-fit: cover;
+    width: 100%;
+    height: auto; */
+}
+
+.slider-item {
+    /* object-fit: cover; */
+    width: 100%;
+    height: auto;
+}
+
+/* Заголовок наши работы + блоки с работами */
+
+.home-slogan {
+    color: #636363;
+    font-family: 'DINPro-CondensedMedium';
+    font-weight: 100;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-size: 28px;
+}
+
+.title-of-page{
+    color: #636363;
+    font-family: 'DINPro-CondensedMedium';
+    font-weight: 550;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.works-main-block {
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 270px);
+    grid-auto-rows: minmax(370px, auto);
+    justify-content: space-between;
+}
+
+
+.work-block {
+    height: 270px;
+    width: 270px;
+    margin-bottom: 75px;
+}
+
+.category-name {
+    width: 270px;
+    font-family: 'DINPro-CondensedMedium';
+    font-weight: 500;
+    font-size: 26px;
+    color: #409a9b;
+}
+
+#q {
+    display: none;
+}
+
+/* Страница товаров на выбранной категории */
+
+.product {
+    /*  */
+}
+
+.name-sort-block {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name-sort-block h1 {
+    font-family: 'DINPro-CondensedMedium';
+    font-size: 45px;
+    font-weight: 500;
+}
+
+
+/* Блок с товарами */
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 270px);
+    grid-auto-rows: minmax(310px, auto);
+    justify-content: space-between;
+}
+
+.product-item {
+    margin-bottom: 50px;
+}
+
+.product-title {
+    width: 270px;
+    font-family: 'DINPro-CondensedMedium';
+    font-weight: 500;
+    font-size: 25px;
+    padding-bottom: 6px;
+    color: #409a9b;
+}
+
+.product-price {
+    padding-bottom: 10px;
+    width: 270px;
+    font-family: 'DINPro-CondensedMedium';
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.add-to-cart {
+    background-color: #999698;
+    border: 0 none;
+    width: 100px;
+    height: 35px;
+    border-style: solid;
+    color: #FFFFFF;
+    border-radius: 0.3em;
+}
+
+
+/* Детальная информация о товаре */
+
+.title-of-product-detail {
+    color: black;
+    font-family: 'DINPro-CondensedMedium';
+    font-weight: 550;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 35px;
+    margin-top: 35px;
+    font-size: 30px;
+}
+
+.product-item-detail {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.info-of-product-detail {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.product-title-detail {
+    padding-bottom: 23px;
+    font-family: 'DINPro-CondensedMedium';
+    font-weight: 550;
+    font-size: 48px;
+}
+
+.product-price-detail {
+    padding-bottom: 23px;
+    font-family: 'DINPro-CondensedMedium';
+    font-size: 30px;
+}
+
+.size-of-product {
+    padding-bottom: 23px;
+    font-family: 'DINPro-CondensedMedium';
+    font-size: 20px;
+    color: #666666;
+}
+
+.title-of-descriprion-detail {
+    width: 100%;
+    background-color: #F6F6F6;
+    height: 55px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.title-of-product-detail-1 {
+    background-color: white;
+    width: 10%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-top: 2px solid black;
+
+}
+
+.title-of-product-detail-1 h4{
+    font-family: 'DINPro-CondensedMedium';
+    font-size: 24px;
+    font-weight: 550;
+    margin: 0 auto;
+}
+
+.descriprion-of-product-detail p{
+    font-family: 'DINPro-CondensedMedium';
+    color: #666666;
+    font-size: 18px;
+}
+
+.add-to-cart-1 {
+    background-color: #999698;
+    border: 0 none;
+    width: 110px;
+    height: 45px;
+    border-style: solid;
+    color: #FFFFFF;
+    border-radius: 0.3em;
+    font-size: 15px;
+}
+
+.add-cart-block-detail {
+    display: flex;
+    align-items: center;
+}
+
+#w {
+    padding-right: 15px;
+}
+
+#w label{
+    display: none;
+}
+
+.cart_product_form {
+    font-weight:bold;
+}
+
+#id_quantity {
+    display: flex; 
+    text-align-last: center;
+    font-size: 16px; 
+    font-family: sans-serif; 
+    font-weight: 700; 
+    color: #444; 
+    padding: .6em 1.4em .5em .8em; width: 100%; 
+    max-width: 100%; 
+    height: 45px;
+    box-sizing: border-box; 
+    margin: 0; 
+    border: 1px solid #aaa;
+    box-shadow: 0 1px 0 1px rgba(0,0,0,.04); 
+    border-radius: .5em;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff; 
+    background-repeat: no-repeat, repeat;
+    /* background-position: right .7em top 50%, 0 0; */
+    background-size: .65em auto, 100%; 
+
+}
+
+.category-of-product {
+    padding-top: 23px;
+    font-family: 'DINPro-CondensedMedium';
+    font-size: 18px;
+    color: #666666;
+}
+
+
+/* Модальное окно */
+
+/* Страница контактов */
+
+.contact-block {
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.child-contact {
+    width: 45%;
+}
+
+.adres-title {
+    text-align: center;
+    font-family: 'DINPro-CondensedMedium';
+    font-weight: 500;
+    padding-bottom: 10px;
+    font-size: 30px;
+
+}
+
+.info-block-contact {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+
+.info-block-text {
+    font-family: 'DINPro-CondensedMedium';
+    font-weight: 500;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+iframe {
+    margin-top: 110px;
+    width: 100%;
+    height: 400px;
+}
+
+.parter-item-block {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40px;
+}
+
+.partner-text {
+    font-family: 'DINPro-CondensedMedium';
+    font-weight: 500;
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+
+.parter-item-block a {
+    font-family: 'DINPro-CondensedMedium';
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.parter-item-block img {
+    padding-bottom: 5px;
+}
+
+.about-block {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.photo-about {
+    width: 46%;
+}
+
+.about-text {
+    width: 46%;
+}
+
+.about-text p {
+    white-space: pre-wrap;
+    font-family: 'DINPro-CondensedMedium';
+    font-weight: 500;
+    font-size: 21px;
+    color: #666666;
+}
+
+.photo-about img {
+    width: 100%;
+    height: auto;
+}
+
+/* Страница корзины */
+
+.order-block {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.detail-of-order {
+    width: 570px;
+    
+}
+
+.order-view {
+    width: 570px;
+   
+}
+
+.name-order-block {
+    text-align: center;
+    font-family: 'DINPro-CondensedMedium';
+    font-weight: 500;
+    font-size: 27px;
+}
+
+/* детали(форма) заполнения заказа*/
+.title-input {
+    font-family: 'DINPro-CondensedMedium';
+    font-weight: 500;
+    font-size: 23px;
+    color: rgb(54, 54, 54);
+}
+
+.reg-info-block input {
+    width: 100%;
+    height: 35px;
+}
+
+.input-double {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-double-text-input {
+    width: 90%;
+}
+
+.input-double-text-input input {
+    width: 100%;
+    height: 35px;
+}
+
+.dostavka-block input {
+}
+
+.order-name input {
+    width: 100%;
+}
+
+
+  
+
+

@@ -1,0 +1,41 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block big_block %}
+    <!-- Большой блок -->
+    <!-- <div class="big-home-block"></div> -->
+    <div class="wrapper">
+        <div class="slider-container">
+            <div class="slider-track">
+                <!-- <div class="slider-item"></div>
+                <div class="slider-item"></div>
+                <div class="slider-item"></div>
+                <div class="slider-item"></div>
+                <div class="slider-item"></div>
+                <div class="slider-item"></div> -->
+                {% for img in slider %}
+                    <img src="{{ img.image.url }}" alt="" class="slider-item">
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    
+{% endblock %}
+
+{% block content %}
+    <!-- Блок "Наши работы" -->
+    <div class="our-works">
+        <h2 class="home-slogan">« Великая керамика забрала мое глиняное сердце и сделала что-то прекрасное... »</h2>
+        <!-- Наши работы -->
+        <div class="works-main-block">
+                {% for category in categorys %}
+                    {% if category.add_in_home %}
+                        <div class="work-block">
+                            <!-- <h4>{{ category.name }}</h4> -->
+                            <a href="{% url 'catalog:category_detail' category.slug %}"><img src="{{ category.image.url }}" alt="" height="270" width="270"></a>
+                            <h3 class="category-name">{{ category.name }}</h3>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+        </div>
+    </div>
+{% endblock %}
