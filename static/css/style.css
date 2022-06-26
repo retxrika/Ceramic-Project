@@ -152,6 +152,47 @@
     align-items: center;
 }
 
+/* Открытое окно контактов */
+
+.contact-open {
+    background-color: white;
+    display: none;
+    position: fixed;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    padding: 20px;
+    bottom: 95px;
+    right: 20px;
+    text-align: left;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 60%);
+    min-height: 55;
+}
+
+.contact-open-container {
+    width: 93%;
+    margin: 0 auto;
+}
+
+.contact-open-wrapper {
+    display: flex;
+}
+
+.contact-open-name {
+    margin-left: 10px;
+    font-size: 30px;
+    font-family: 'DINPro-CondensedMedium';
+    color: #636363;
+}
+
+.contact-open-wrapper:hover {
+    background-color: #F0F0F0;
+}
+
+.contact-cart-block:hover .contact-open {
+    display: block;
+}
+
 .сart-inner {
     width: 80px;
     height: 80px;
@@ -208,7 +249,8 @@
     color: #6C6D70;
 }
 
-.contact-cart-block:active .cart-open {
+
+.contact-cart-block:focus {
     display: block;
 }
 
