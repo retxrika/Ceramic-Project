@@ -121,8 +121,6 @@
 }
 
 .contact-cart-block {
-    width: 80px;
-    height: 80px;
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -167,16 +165,18 @@
 .cart-len {
     display: flex;
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 25px;
-    height: 25px;
+    top: 5px;
+    left: 5px;
+    width: 22px;
+    height: 22px;
     background: #E94B35;
     border-radius: 50%;
     text-align: center;
     color: white;
     align-items: center;
     justify-content: center;
+    font-family: 'DINPro-CondensedMedium';
+    font-size: 15px;
 }
 
 .cart-wrapper {
@@ -193,6 +193,118 @@
     transition: 0.3s;
     cursor: pointer;
     background: #d2d2d2;
+}
+
+/* Открытая корзина */
+
+.cart-open {
+    background-color: white;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    width: 400px;
+    display: none;
+    font-family: 'DINPro-CondensedMedium';
+    color: #6C6D70;
+}
+
+.contact-cart-block:active .cart-open {
+    display: block;
+}
+
+.cart-open:hover {
+    display: block;
+}
+
+.cart-open-container {
+    width: 93%;
+    margin: 0 auto;
+}
+
+.cart-open-wrapper1 {
+    display: flex;
+}
+
+.cart-open-title {
+    width: 100%;
+    height: 50px;
+    background-color: #569192;
+    display: flex;
+    align-items: center;
+}
+
+.cart-open-title h2 {
+    font-family: 'DINPro-CondensedMedium';
+    font-size: 23px;
+    color: white;
+    font-weight: 100; 
+}
+
+.cart-open-products {
+    border-left: 1px black solid;
+    border-right: 1px black solid;
+    padding-bottom: 15px;
+}
+
+.cart-open-item {
+    padding-top: 15px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.cart-open-item-quantily {
+    padding-left: 17px;
+}
+
+.cart-open-item-quantily h4 {
+    font-size: 25px;
+    font-weight: 100;
+}
+
+.cart-open-quantily {
+    width: 70px;
+    height: 50px;
+    background-color: #409a9b;
+}
+
+
+.cart-open-total {
+    height: 50px;
+    background-color: #7BC4BE;
+}
+
+.cart-open-total:hover {
+    transition: 0.3s;
+    background-color: #509791;
+}
+
+.cart-open-price {
+    text-align: right;
+}
+
+.cart-open-price p {
+    font-size: 25px;
+    font-weight: 100;
+}
+
+.cart-open-price a {
+    color: #6C6D70;
+    text-decoration: none;
+    font-weight: 100;
+}
+
+.cart-open-total {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-open-total-link p {
+    text-decoration: none;
+    color: #3E3E3F;
+    font-weight: 600;
+    font-size: 27px;
 }
 
 /* Логотип + меню */
