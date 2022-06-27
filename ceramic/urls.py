@@ -30,7 +30,6 @@ urlpatterns = [
     path('partners/', views.partners, name='partners'),
     path('pay/', views.pay, name='pay'),
     path('pay-redirect/', views.pay_redirect, name='pay_redirect'),
-    path('cart/', views.cart, name='cart')
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

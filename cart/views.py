@@ -39,3 +39,9 @@ def cart_detail(request):
                                                                    'update': True})
     print('Жопа')
     return render(request, 'PATH/TEMPLATE.html', {'cart': cart})
+
+def cart(request):
+    return render(request, 'cart/cart.html')
+
+def cart_order(request):
+    return render(request, 'cart/cart_order.html')
