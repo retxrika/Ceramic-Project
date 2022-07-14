@@ -2,17 +2,89 @@
 
 {% block content %}
 
-  <div class="container-fluid-cart">
-            {% for item in cart %}
-                {% with product=item.product %}
-                    <img src="{{ item.product.image.url }}" width="50px" height="50px">
-                    {{ item.product.title }}
-                    {{ item.price }} <!-- Цена -->
-                    {{ item.quantity }} <!-- Количество -->
-                    руб. {{ item.total_price }} <!-- Подитог -->
-                {% endwith %}
-            {% endfor %}
-  </div>
+    <div class="container-fluid-cart">
+        <h1 class="title-of-page">Ваш заказ</h1>
+        <div class="cart-adaptive">
+            <div class="cart-item-container">
+                <div class="cart-items">
+                    <div class="cart-block headline">
+                        .
+                    </div>
+                    <div class="cart-block headline">
+                        .
+                    </div>
+                    <div class="cart-block headline">
+                        Товар
+                    </div>
+                    <div class="cart-block headline">
+                        Цена
+                    </div>
+                    <div class="cart-block headline">
+                        Кол-во
+                    </div>
+                    <div class="cart-block headline">
+                        Стоимость
+                    </div>
+                    {% for item in cart %}
+                        {% with product=item.product %}
+                            <div class="cart-block cancel cart-block-text">
+                                <button>
+                                    < <!-- ссылка на товар -->
+                                </button>
+                            </div>
+                            <div class="cart-block cart-item-ico">
+                                <img src="{{ item.product.image.url }}">
+                            </div>
+                            <div class="cart-block cart-item-title cart-block-text">
+                                {{ item.product.title }}
+                            </div>
+                            <div class="cart-block cart-item-price cart-block-text">
+                                ₽ {{ item.price }} <!-- Цена -->
+                            </div>
+                            <div class="cart-block cart-item-price cart-item-quantity">
+                                <input type="text" value="{{ item.quantity }}">  
+                                <!-- Количество -->
+                                <!-- Должно изменяться -->
+                            </div>
+                            <div class="cart-block cart-item-totalprice cart-block-text">
+                                ₽ {{ item.total_price }} <!-- Подитог -->
+                            </div>
+                        {% endwith %}
+                    {% endfor %}
+                </div>
+                <div class="update-cart">
+                    <button>
+                        Обновить корзину
+                    </button>
+                </div>
+            </div>
+            <div class="cart-cost-container">
+                <!-- Боковая панель с конечной стоимостью -->
+                <div class="cart-cost-items">
+                    <div class="cart-cost-block">
+                        <div class="cart-cost-item">
+                            Стоимость
+                        </div>
+                        <div class="cart-cost-item">
+                            ₽ 0.00
+                        </div>
+                    </div>
+                    <div class="cart-cost-block bold">
+                        <div class="cart-cost-item">
+                            Итого
+                        </div>
+                        <div class="cart-cost-item">
+                            ₽ 0.00
+                        </div>
+                    </div>
+                    <button class="cart-cost-pay">
+                        ОПЛАТИТЬ
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
 
 {% endblock %}
     
