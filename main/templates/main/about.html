@@ -3,11 +3,11 @@
 {% block content %}
     <div class="container-fluid-about">
 
-        <h2 class="title-of-page">О мастерской</h2>
+        <h1 class="title-of-page">О мастерской</h1>
 
         {% for about in abouts %}
             <div class="about-block">
-                <div class="photo-about">
+                <div class="about-photo">
                     <img src="{{ about.image.url }}" alt="">
                 </div>
                 <div class="about-text">
