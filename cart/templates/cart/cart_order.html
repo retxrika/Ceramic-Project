@@ -5,46 +5,28 @@
     <div class="container-fluid-cart">
         <form action="{% url 'pay' %}" method='post'>
             {% csrf_token %}
-            <div class="reg-info-block">
-              <p class="title-input">Ваш Email</p>
-              {{ cartForm.email }}
-              {{ cartForm.number }}
-              <p class="title-input">Есть подарочный сертификат?</p>
-              {{ cartForm.gift_sertificate }}
-            </div>
-            <div class="dostavka-block">
-              <h3 class="title-dostavka">Доставка</h3>
-              <p class="title-input">Город</p>
-              {{ cartForm.city }}
-              {{ cartForm.type_dost }} СДЭК
-              <p class="title-input">Получатель (ФИО полностью)</p>
-              {{ cartForm.name_of_user }}
-              <p class="title-input">Улица</p>
-              {{ cartForm.street }}
-              <div class="home-room">
-                <div class="home-room-child">
-                  <p class="title-input">Дом</p>
-                  {{ cartForm.house }}
-                </div>
-                <div class="home-room-child">
-                  <p class="title-input">Квартира/офис</p>
-                  {{ cartForm.room }}
-                </div>
-              </div>
-              <div class="commit-block">
-                <p class="title-input">Комментарий к заказу</p>
-                {{ cartForm.commit }}
-              </div>
-              <div class="total">
-                <div>
-                  <p>Сумма: {{ cart.get_total_price }} р.</p>
-                  <h3>Итоговая сумма: {{ cart.get_total_price }} р.</h3>
-                </div>
-              </div>
-            </div>
-            <div class="btn-zakaz">
-              <input type="submit" value="Перейти к оплате">
-            </div>
+            
+            <!-- Поля для оформления заказа -->
+            {{ cartForm.name }}
+            {{ cartForm.surname }}
+            {{ cartForm.number }}
+            {{ cartForm.email }}
+            {{ cartForm.commit }}
+
+            <!-- Название товаров, их количество и цена с учетом количества -->
+            {% for item in cart %}
+              {% with product=item.product %}
+                  {{ item.product.title }}
+                  {{ item.quantity }}
+                  {{ item.total_price }}
+              {% endwith %}
+            {% endfor %}
+
+            <!-- Общая сумма корзины -->
+            {{ cart.get_total_price }}
+
+            
+            <input type="submit" value="Подтвердить заказ">
           </form>
     </div>
 
