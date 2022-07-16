@@ -3,31 +3,99 @@
 {% block content %}
 
     <div class="container-fluid-cart">
+        <h2 class="title-of-page">
+            Оформление заказа
+        </h2>
         <form action="{% url 'pay' %}" method='post'>
             {% csrf_token %}
+            <div class="order-form">
+                <div class="order-details">
+                    <div class="order-details-user">
+                        <h3>
+                            Детали оплаты
+                        </h3>
+                        <!-- Поля для оформления заказа -->
+                        <div class="order-input name">
+                            <p>
+                                Имя *
+                            </p>
+                            {{ cartForm.name }}
+                        </div>
+                        <div class="order-input surname">
+                            <p>
+                                Фамилия *
+                            </p>
+                            {{ cartForm.surname }}
+                        </div>
+                        <div class="order-input phone-number">
+                            <p>
+                                Номер телефона *
+                            </p>
+                            {{ cartForm.number }}
+                        </div>
+                        <div class="order-input email">
+                            <p>
+                                Email *
+                            </p>
+                            {{ cartForm.email }}
+                        </div>
+                    </div>
+                    <div class="order-details-commit">
+                        <h3>
+                            Детали
+                        </h3>
+                        <div class="order-input email">
+                            <p>
+                                Примечания к заказу (необязательно)
+                            </p>
+                            {{ cartForm.commit }}
+                        </div>
+                    </div>
+                </div>
+                <div class="order-cost-container">
+                    <h3>
+                        Ваш заказ
+                    </h3>
+                    <div class="order-cost-items">
+                        <!-- Название товаров, их количество и цена с учетом количества -->
+                        {% for item in cart %}
+                            {% with product=item.product %}
+                                <!-- <div class="cart-cost-block"> -->
+                                    <div class="order-cost-item">
+                                        {{ item.product.title }}
+                                        ×
+                                        {{ item.quantity }}
+                                    </div>
+                                    <div class="order-cost-item cost">
+                                        ₽ {{ item.total_price }}
+                                    </div>
+                                <!-- </div> -->
+                            {% endwith %}
+                        {% endfor %}
             
-            <!-- Поля для оформления заказа -->
-            {{ cartForm.name }}
-            {{ cartForm.surname }}
-            {{ cartForm.number }}
-            {{ cartForm.email }}
-            {{ cartForm.commit }}
-
-            <!-- Название товаров, их количество и цена с учетом количества -->
-            {% for item in cart %}
-              {% with product=item.product %}
-                  {{ item.product.title }}
-                  {{ item.quantity }}
-                  {{ item.total_price }}
-              {% endwith %}
-            {% endfor %}
-
-            <!-- Общая сумма корзины -->
-            {{ cart.get_total_price }}
-
-            
-            <input type="submit" value="Подтвердить заказ">
-          </form>
+                        <!-- Общая сумма корзины -->
+                        <!-- <div class="cart-cost-block bold"> -->
+                            <div class="order-cost-item">
+                                Подытог
+                            </div>
+                            <div class="order-cost-item cost">
+                                ₽ {{ cart.get_total_price }}
+                            </div>
+                            <div class="order-cost-item bold">
+                                Итого
+                            </div>
+                            <div class="order-cost-item bold cost">
+                                ₽ {{ cart.get_total_price }}
+                            </div>
+                        <!-- </div> -->
+                        <div class="confirm-order">
+                            <input class="confirm-order" type="submit" value="Подтвердить заказ">
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </form>
     </div>
 
 {% endblock %}
