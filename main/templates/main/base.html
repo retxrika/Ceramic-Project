@@ -55,11 +55,10 @@
           </div>
       </div>
     </div>
-  </div>
 
       <!-- Всплывающие окна в правом нижнем углу -->
       <div class="contact-cart-block">
-        {% if len_product == 0 %}
+        <!-- {% if len_product == 0 %} -->
           <div class="contact-inner">
             <div class="contact-wrapper">
               <img alt="" height="35" width="35" src="{% static 'images/massege.png' %}">
@@ -67,23 +66,26 @@
          </div>
 
          <div class="contact-open">
-            <a href="#" class="contact-open-wrapper">
-              <img alt="" height="40" width="40" src="{% static 'images/whatsapp.svg'%}">
-              <p class="contact-open-name">Whatsapp</p>
-            </a>
-            <a href="#" class="contact-open-wrapper">
-              <img alt="" height="40" width="40" src="{% static 'images/viber.svg'%}">
-              <p class="contact-open-name">Viber</p>
-            </a>
-            <a href="#" class="contact-open-wrapper">
-              <img alt="" height="40" width="40" src="{% static 'images/email.svg'%}">
-              <p class="contact-open-name">Написать на почту</p>
-            </a>
-            <a href="#" class="contact-open-wrapper">
-              <img alt="" height="40" width="40" src="{% static 'images/phone2.svg'%}">
-              <p class="contact-open-name">Обратный звонок</p>
-            </a>
+            <div class="contact-open-container">
+                <a href="#" class="contact-open-wrapper">
+                  <img alt="" height="40" width="40" src="{% static 'images/whatsapp.svg'%}">
+                <p class="contact-open-name">Whatsapp</p>
+              </a>
+              <a href="#" class="contact-open-wrapper">
+                <img alt="" height="40" width="40" src="{% static 'images/viber.svg'%}">
+                <p class="contact-open-name">Viber</p>
+              </a>
+              <a href="#" class="contact-open-wrapper">
+                <img alt="" height="40" width="40" src="{% static 'images/email.svg'%}">
+                <p class="contact-open-name">Написать на почту</p>
+              </a>
+              <a href="#" class="contact-open-wrapper">
+                <img alt="" height="40" width="40" src="{% static 'images/phone2.svg'%}">
+                <p class="contact-open-name">Обратный звонок</p>
+              </a>
+            </div>
           </div>
+          <div class="contact-open-triangle"></div>
         {% else %}
           <div class="cart-inner">
             <div class="cart-wrapper">
@@ -140,6 +142,7 @@
         {% endblock %}
         <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
         <script src="{% static 'js/script.js' %}"></script>
-       
+        <script src="{% static 'js/soc_cart.js' %}"></script>
+      
       </body>
 </html>

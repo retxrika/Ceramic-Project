@@ -172,42 +172,46 @@
 
 .contact-open {
     background-color: white;
+    position: absolute;
     display: none;
-    position: fixed;
-    margin-left: 20px;
-    margin-bottom: 10px;
-    padding: 20px;
-    bottom: 95px;
-    right: 20px;
-    text-align: left;
+    bottom: 100px;
+    right: 10px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgb(0 0 0 / 60%);
-    min-height: 55;
+}
+
+.contact-open-triangle {
+    position: absolute;
+    display: none;
+    bottom: 80px;
+    right: 50px;
+    height: 1000;
+	border-top: 20px solid rgb(255, 255, 255); 
+	border-left: 20px solid transparent;
 }
 
 .contact-open-container {
-    width: 93%;
-    margin: 0 auto;
+    margin: 20px;
 }
 
 .contact-open-wrapper {
     display: flex;
-}
-
-.contact-open-name {
-    margin-left: 10px;
-    font-size: 30px;
-    font-family: 'DINPro-CondensedMedium';
-    color: #636363;
+    border-radius: 10px;
+    margin: 10px 10px 10px 0px;
 }
 
 .contact-open-wrapper:hover {
     background-color: #F0F0F0;
 }
 
-.contact-cart-block:hover .contact-open {
-    display: block;
+.contact-open-name {
+    font-size: 22px;
+    white-space: nowrap; 
+    padding: 6px 0px 0px 10px;
+    font-family: 'DINPro-CondensedMedium';
+    color: #636363;
 }
+
 
 .сart-inner {
     width: 80px;
