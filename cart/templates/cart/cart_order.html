@@ -3,49 +3,99 @@
 {% block content %}
 
     <div class="container-fluid-cart">
+        <h2 class="title-of-page">
+            Оформление заказа
+        </h2>
         <form action="{% url 'pay' %}" method='post'>
             {% csrf_token %}
-            <div class="reg-info-block">
-              <p class="title-input">Ваш Email</p>
-              {{ cartForm.email }}
-              {{ cartForm.number }}
-              <p class="title-input">Есть подарочный сертификат?</p>
-              {{ cartForm.gift_sertificate }}
-            </div>
-            <div class="dostavka-block">
-              <h3 class="title-dostavka">Доставка</h3>
-              <p class="title-input">Город</p>
-              {{ cartForm.city }}
-              {{ cartForm.type_dost }} СДЭК
-              <p class="title-input">Получатель (ФИО полностью)</p>
-              {{ cartForm.name_of_user }}
-              <p class="title-input">Улица</p>
-              {{ cartForm.street }}
-              <div class="home-room">
-                <div class="home-room-child">
-                  <p class="title-input">Дом</p>
-                  {{ cartForm.house }}
+            <div class="order-form">
+                <div class="order-details">
+                    <div class="order-details-user">
+                        <h3>
+                            Детали оплаты
+                        </h3>
+                        <!-- Поля для оформления заказа -->
+                        <div class="order-input name">
+                            <p>
+                                Имя *
+                            </p>
+                            {{ cartForm.name }}
+                        </div>
+                        <div class="order-input surname">
+                            <p>
+                                Фамилия *
+                            </p>
+                            {{ cartForm.surname }}
+                        </div>
+                        <div class="order-input phone-number">
+                            <p>
+                                Номер телефона *
+                            </p>
+                            {{ cartForm.number }}
+                        </div>
+                        <div class="order-input email">
+                            <p>
+                                Email *
+                            </p>
+                            {{ cartForm.email }}
+                        </div>
+                    </div>
+                    <div class="order-details-commit">
+                        <h3>
+                            Детали
+                        </h3>
+                        <div class="order-input email">
+                            <p>
+                                Примечания к заказу (необязательно)
+                            </p>
+                            {{ cartForm.commit }}
+                        </div>
+                    </div>
                 </div>
-                <div class="home-room-child">
-                  <p class="title-input">Квартира/офис</p>
-                  {{ cartForm.room }}
+                <div class="order-cost-container">
+                    <h3>
+                        Ваш заказ
+                    </h3>
+                    <div class="order-cost-items">
+                        <!-- Название товаров, их количество и цена с учетом количества -->
+                        {% for item in cart %}
+                            {% with product=item.product %}
+                                <!-- <div class="cart-cost-block"> -->
+                                    <div class="order-cost-item">
+                                        {{ item.product.title }}
+                                        ×
+                                        {{ item.quantity }}
+                                    </div>
+                                    <div class="order-cost-item cost">
+                                        ₽ {{ item.total_price }}
+                                    </div>
+                                <!-- </div> -->
+                            {% endwith %}
+                        {% endfor %}
+            
+                        <!-- Общая сумма корзины -->
+                        <!-- <div class="cart-cost-block bold"> -->
+                            <div class="order-cost-item">
+                                Подытог
+                            </div>
+                            <div class="order-cost-item cost">
+                                ₽ {{ cart.get_total_price }}
+                            </div>
+                            <div class="order-cost-item bold">
+                                Итого
+                            </div>
+                            <div class="order-cost-item bold cost">
+                                ₽ {{ cart.get_total_price }}
+                            </div>
+                        <!-- </div> -->
+                        <div class="confirm-order">
+                            <input class="confirm-order" type="submit" value="Подтвердить заказ">
+                        </div>
+                    </div>
+                    
                 </div>
-              </div>
-              <div class="commit-block">
-                <p class="title-input">Комментарий к заказу</p>
-                {{ cartForm.commit }}
-              </div>
-              <div class="total">
-                <div>
-                  <p>Сумма: {{ cart.get_total_price }} р.</p>
-                  <h3>Итоговая сумма: {{ cart.get_total_price }} р.</h3>
-                </div>
-              </div>
             </div>
-            <div class="btn-zakaz">
-              <input type="submit" value="Перейти к оплате">
-            </div>
-          </form>
+        </form>
     </div>
 
 {% endblock %}

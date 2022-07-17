@@ -43,7 +43,7 @@
 }
 
 .container-fluid-cart {
-    max-width: 1250px;
+    max-width: 1024px;
     width: 100%;
     margin: 0 auto;
 }
@@ -950,4 +950,118 @@ button.cart-cost-pay:active {
     padding: 0 32px;
     text-align: justify;
     align-items: center;
+}
+
+.order-form {
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    font-size: 24px;
+}
+.order-form h3 {
+    padding: 8px 16px;
+    box-sizing: border-box;
+}
+
+.order-details-user {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.order-details-user h3 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.order-input {
+    box-sizing: border-box;
+    padding: 0 16px;
+}
+.order-input p{
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: gray;
+    box-sizing: border-box;
+    padding: 8px 0;
+}
+.order-details-user .phone-number {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.order-details-user .email {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.order-details-user input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    background: rgb(243, 243, 243);
+    border-top: 1px solid rgb(151, 151, 151);
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 6px;
+    font-size: 18px;
+    height: 36px;
+}
+.order-details-commit textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    background: rgb(243, 243, 243);
+    border-top: 1px solid rgb(151, 151, 151);
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 6px;
+    font-size: 18px;
+}
+.confirm-order {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.confirm-order input{
+    padding: 16px 32px;
+    margin: 8px 0;
+    background: #7BC4BE;
+    color: #404344;
+    font-weight: bold;
+    font-size: 14px;
+    border: none;
+    border-radius: 12px;
+    font-family: 'DINPro-CondensedMedium', "Segoe UI", Arial, Helvetica, sans-serif;
+    font-size: 24px;
+}
+.confirm-order input:hover {
+    background: #9ee9d6;
+}
+.confirm-order input:focus {
+    background: #608aa3;
+}
+
+.order-cost-container {
+    min-width: 300px;
+}
+.order-cost-items {
+    display: grid;
+    grid-template-columns: fit-content(100%);
+    background: rgba(223, 223, 223, 0.418);
+    color: gray;
+    padding: 20px 32px;
+    margin: 0 12px;
+    font-size: 14px;
+
+}
+
+.order-cost-item {
+    margin: 4px 0;
+}
+.order-cost-item.bold {
+    font-weight: bold;
+    font-size:x-large;
+}
+.order-cost-item.cost {
+    display: flex;
+    justify-content: right;
+    align-items:flex-end;
 }
