@@ -33,7 +33,13 @@
 /* Основные контейнеры */
 
 .container-fluid {
-    width: 950px;
+    width: 1050px;
+    margin: 0 auto;
+}
+
+.container-fluid-product {
+    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -381,24 +387,23 @@
 
 .menu {
     display: flex;
-    
 }
 
 .menu-link {
+    color: #939598;  
     padding-left: 10px;
-    color: #636363;
     font-family: 'DINPro-CondensedMedium';
     font-size: 23px;
 }
 
 .menu-link:hover {
-    color: black;  
+    color: #636363;
     transition: 0.3s;  
 }
 
 .separator {
     padding-left: 10px;
-    color: black;
+    color: #636363;
     font-family: 'DINPro-CondensedMedium';
     font-size: 22px;
 }
@@ -489,26 +494,64 @@
 
 /* Страница товаров на выбранной категории */
 
-.product {
-    /*  */
-}
-
-.name-sort-block {
-    padding-top: 25px;
-    padding-bottom: 25px;
+.category-top {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
+    justify-content: flex-start;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: -72px;
 }
 
-.name-sort-block h1 {
+.category-top-link {
+    color: #939598;
     font-family: 'DINPro-CondensedMedium';
-    font-size: 45px;
-    font-weight: 500;
+    font-size: 23px;
+}
+
+.category-top-current {
+    color: #696A6D;
+    font-family: 'DINPro-CondensedMedium';
+    font-size: 35px;
+    text-transform: uppercase;
+    margin-left: 7px;
+}
+
+.category-top-link:hover {
+    color: #696A6D;  
+    transition: 0.3s;  
 }
 
 
 /* Блок с товарами */
+
+.product-top {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 0px;
+}
+
+.product-top-link {
+    color: #939598;
+    font-family: 'DINPro-CondensedMedium';
+    font-size: 23px;
+}
+
+.product-top-current {
+    color: #696A6D;
+    font-family: 'DINPro-CondensedMedium';
+    font-size: 35px;
+    text-transform: uppercase;
+    margin-left: 7px;
+}
+
+.product-top-link:hover {
+    color: #696A6D;  
+    transition: 0.3s;  
+}
 
 .products {
     display: grid;
@@ -539,7 +582,7 @@
 }
 
 .add-to-cart {
-    background-color: #999698;
+    background-color: #569192;
     border: 0 none;
     width: 100px;
     height: 35px;

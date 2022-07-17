@@ -1,12 +1,19 @@
 {% extends 'main/base.html' %}
 
 {% block content %}
-    <h2 class='title-of-product-detail'>{{ product.title }}</h2>
+<div class="container-fluid-product">
+    <div class="product-top">
+        <li class="">
+            <a class="product-top-link" href="{% url 'catalog:catalog' %}">КАТАЛОГ</a>
+        </li>
+        <p class="product-top-current">| {{ product.category.name }}</p>
+    </div>
+    
     <div class="product-item-detail">
         <div class="img-of-product-detail">
             <a href="{% url 'catalog:product_detail' product.slug %}"><img src="{{ product.image.url }}" alt="" class="product-img-detail" height="370" width="370"></a>
         </div>
-
+        
         <div class="info-of-product-detail">
             <h3 class="product-title-detail">{{ product.title }}</h3>
             <!-- <p class='product-price'>{{ product.descriprion }}</p> -->
@@ -22,7 +29,7 @@
             <p class='category-of-product'>Категория: <a href="{% url 'catalog:category_detail' product.category.slug %}">{{ product.category.name }}</a></p>
         </div>
     </div>
-
+    
     <div class="descriprion-of-product-detail">
         <div class="title-of-descriprion-detail">
             <div class="title-of-product-detail-1">
@@ -32,4 +39,5 @@
         <p>{{ product.descriprion }}</p>
     </div>
     <hr>
+</div>
 {% endblock %}

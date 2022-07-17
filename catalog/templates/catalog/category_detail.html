@@ -2,12 +2,13 @@
 
 {% block content %}
     <div class="container-fluid">
-        <div class="product">
-            <div class="name-sort-block">
-                <h1>{{ category.name }}</h1>
-                <div class="sort">Сортировка</div>
+            <div class="category-top">
+                <li class="">
+                    <a class="category-top-link" href="{% url 'catalog:catalog' %}">КАТАЛОГ</a>
+                </li>
+                <p class="category-top-current">| {{ category.name }}</p>
             </div>
-    
+                
             <div class="products">
                     {% for product in products %}
                         {% if category.name == product.category.name %}
@@ -24,7 +25,5 @@
                         {% endif %}
                     {% endfor %}
             </div>
-    
-        </div>
     </div>
 {% endblock %}
