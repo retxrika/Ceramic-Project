@@ -8,36 +8,60 @@
         </li>
         <p class="product-top-current">| {{ product.category.name }}</p>
     </div>
+
+    <hr class="product-line">
     
-    <div class="product-item-detail">
-        <div class="img-of-product-detail">
-            <a href="{% url 'catalog:product_detail' product.slug %}"><img src="{{ product.image.url }}" alt="" class="product-img-detail" height="370" width="370"></a>
-        </div>
-        
-        <div class="info-of-product-detail">
-            <h3 class="product-title-detail">{{ product.title }}</h3>
-            <!-- <p class='product-price'>{{ product.descriprion }}</p> -->
-            <p class='product-price-detail'>₽ {{ product.price }}</p>
-            <p class='size-of-product'>{{ product.size }}</p>
-            <form action="{% url 'cart:cart_add' product.id %}" method="post">
-                <div class="add-cart-block-detail">
-                    <p id="w">{{ cart_product_form }}</p>
-                    {% csrf_token %}
-                    <input type="submit" value="В корзину" class="add-to-cart-1">
-                </div>
-            </form>
-            <p class='category-of-product'>Категория: <a href="{% url 'catalog:category_detail' product.category.slug %}">{{ product.category.name }}</a></p>
-        </div>
-    </div>
-    
-    <div class="descriprion-of-product-detail">
-        <div class="title-of-descriprion-detail">
-            <div class="title-of-product-detail-1">
-                <h4>Описание</h3>
+    <div class="product-detail">
+        <div>
+            <div class="product-detail-images-top">
+                <a href="{% url 'catalog:product_detail' product.slug %}">
+                    <img src="{{ product.image.url }}" alt="" height="381" width="381">
+                </a>
+            </div>
+            <div class="product-detail-images-bottom">
+                <a href="{% url 'catalog:product_detail' product.slug %}">
+                    <img src="{{ product.image.url }}" alt="" height="80" width="80">
+                </a>
+                <a href="{% url 'catalog:product_detail' product.slug %}">
+                    <img src="{{ product.image.url }}" alt="" height="80" width="80">
+                </a>
+                <a href="{% url 'catalog:product_detail' product.slug %}">
+                    <img src="{{ product.image.url }}" alt="" height="80" width="80">
+                </a>
+                <a href="{% url 'catalog:product_detail' product.slug %}">
+                    <img src="{{ product.image.url }}" alt="" height="80" width="80">
+                </a>
             </div>
         </div>
-        <p>{{ product.descriprion }}</p>
+        
+        <div class="product-detail-info">
+            <h3 class="product-detail-info-title">{{ product.title }}</h3>
+            <div class="product-detail-info-compos">
+                <p class="product-detail-info-compos-title">Состав:</p>
+                <p class='product-detail-info-compos-price'>₽ {{ product.price }}</p>
+                <div class="product-detail-info-compos-chars">
+                    <p>Размер изделия: 20*100*100</p>
+                    <p>Состав: Тубус</p>
+                    <p>Состав: 22*12</p>
+                </div>
+            </div>
+            <div class="product-detail-info-order">
+                <h4>Доступно для предзаказа</h4>
+                <form action="{% url 'cart:cart_add' product.id %}" method="post">
+                    <div class="product-detail-info-order-add-cart">
+                        <p id="w">{{ cart_product_form }}</p>
+                        {% csrf_token %}
+                        <input type="submit" value="В корзину" class="product-detail-info-add-cart-btn">
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-    <hr>
+    
+    <div class="product-descriprion">
+        <h3>Описание</h3>
+        <!-- <p>{{ product.descriprion }}</p> -->
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur quisquam distinctio nesciunt obcaecati nihil accusamus vero at unde nostrum aut, voluptatibus explicabo tenetur ab libero, culpa facere? Enim, quia inventore.</p>
+    </div>
 </div>
 {% endblock %}

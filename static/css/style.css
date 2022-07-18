@@ -9,6 +9,7 @@
     font-family: 'DINPro-CondensedMedium';
     src: url("../fonts/bf27039ecba4e6511abddd84122a8aac.eot") format("truetype");
 } */
+
 @font-face { 
     font-family: "DINPro-CondensedMedium";
     src: url("../fonts/DINProCondensedRegular/DINProCondensedRegular.eot");
@@ -17,7 +18,7 @@
     url("../fonts/DINProCondensedRegular.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
-}
+} 
 /* @font-face {
     font-family: 'fontbf27039ecba4e6511abddd84122a8aac';
         
@@ -525,34 +526,6 @@
 
 /* Блок с товарами */
 
-.product-top {
-    display: flex;
-    align-items: baseline;
-    justify-content: flex-start;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    margin-left: 0px;
-}
-
-.product-top-link {
-    color: #939598;
-    font-family: 'DINPro-CondensedMedium';
-    font-size: 23px;
-}
-
-.product-top-current {
-    color: #696A6D;
-    font-family: 'DINPro-CondensedMedium';
-    font-size: 35px;
-    text-transform: uppercase;
-    margin-left: 7px;
-}
-
-.product-top-link:hover {
-    color: #696A6D;  
-    transition: 0.3s;  
-}
-
 .products {
     display: grid;
     grid-template-columns: repeat(auto-fit, 270px);
@@ -594,105 +567,130 @@
 
 /* Детальная информация о товаре */
 
-.title-of-product-detail {
-    color: black;
-    font-family: 'DINPro-CondensedMedium';
-    font-weight: 550;
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 35px;
-    margin-top: 35px;
-    font-size: 30px;
-}
-
-.product-item-detail {
+.product-top {
     display: flex;
-    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: flex-start;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    margin-left: 0px;
 }
 
-.info-of-product-detail {
+.product-top-link {
+    color: #939598;
+    font-family: 'DINPro-CondensedMedium';
+    font-size: 23px;
+}
+
+.product-top-current {
+    color: #696A6D;
+    font-family: 'DINPro-CondensedMedium';
+    font-size: 35px;
+    text-transform: uppercase;
+    margin-left: 7px;
+}
+
+.product-top-link:hover {
+    color: #696A6D;  
+    transition: 0.3s;  
+}
+
+hr.product-line {
+    border: 15px solid #7BC4BE;
+    margin-bottom: 10px;
+}
+
+.product-detail {
+    display: flex;
+    padding-bottom: 50px;
+    align-items: center;
+}
+
+.product-detail-images-top {
+    padding-bottom: 25px;
+}
+
+.product-detail-images-bottom {
+    margin-left: -10px;
+    display: flex;
+}
+
+.product-detail-images-bottom a {
+    margin: 10px;
+}
+
+.product-detail-info {
     width: 60%;
-    margin: 0 auto;
+    margin: 30px;
 }
 
-.product-title-detail {
-    padding-bottom: 23px;
+.product-detail-info-title {
+    font-family: 'DINPro-CondensedMedium';
+    font-weight: 500;
+    font-size: 55px;
+    color: #569192;
+    padding-bottom: 5px;
+}
+
+.product-detail-info-compos {
+    padding-bottom: 20px;
+}
+
+.product-detail-info-compos-title{
+    font-family: 'DINPro-CondensedMedium';
+    font-size: 28px;
+    color: #6C6D70;
+    padding-bottom: 130px;
+    font-weight: 500;
+} 
+
+.product-detail-info-compos-price {
+    font-family: 'DINPro-CondensedMedium';
+    font-size: 40px;
+    color: #569192;
+}
+
+.product-detail-info-compos-chars {
+    padding-bottom: 30px;
+}
+
+.product-detail-info-order h4 {
     font-family: 'DINPro-CondensedMedium';
     font-weight: 550;
-    font-size: 48px;
+    font-size: 35px;
+    margin: 10px auto;
+    color: #569192;
 }
 
-.product-price-detail {
-    padding-bottom: 23px;
+.product-detail-info-compos-chars p {
     font-family: 'DINPro-CondensedMedium';
-    font-size: 30px;
+    font-size: 28px;
+    color: #6C6D70;
 }
 
-.size-of-product {
-    padding-bottom: 23px;
-    font-family: 'DINPro-CondensedMedium';
-    font-size: 20px;
-    color: #666666;
-}
-
-.title-of-descriprion-detail {
-    width: 100%;
-    background-color: #F6F6F6;
-    height: 55px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-}
-
-.title-of-product-detail-1 {
-    background-color: white;
-    width: 10%;
-    height: 100%;
+.product-detail-info-order-add-cart {
     display: flex;
     align-items: center;
-    text-align: center;
-    border-top: 2px solid black;
-
 }
 
-.title-of-product-detail-1 h4{
-    font-family: 'DINPro-CondensedMedium';
-    font-size: 24px;
-    font-weight: 550;
-    margin: 0 auto;
-}
-
-.descriprion-of-product-detail p{
-    font-family: 'DINPro-CondensedMedium';
-    color: #666666;
-    font-size: 18px;
-}
-
-.add-to-cart-1 {
-    background-color: #999698;
+.product-detail-info-add-cart-btn {
+    background-color: #569192;
     border: 0 none;
-    width: 110px;
+    width: 150px;
     height: 45px;
     border-style: solid;
     color: #FFFFFF;
-    border-radius: 0.3em;
-    font-size: 15px;
-}
-
-.add-cart-block-detail {
-    display: flex;
-    align-items: center;
+    font-size: 25px;
+    font-family: 'DINPro-CondensedMedium';
 }
 
 #w {
-    padding-right: 15px;
+    width: 150px;
+    height: 45px;;
 }
 
 #w label{
     display: none;
-}
-
-.cart_product_form {
-    font-weight:bold;
 }
 
 #id_quantity {
@@ -709,7 +707,6 @@
     margin: 0; 
     border: 1px solid #aaa;
     box-shadow: 0 1px 0 1px rgba(0,0,0,.04); 
-    border-radius: .5em;
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
@@ -717,14 +714,27 @@
     background-repeat: no-repeat, repeat;
     /* background-position: right .7em top 50%, 0 0; */
     background-size: .65em auto, 100%; 
-
 }
 
-.category-of-product {
-    padding-top: 23px;
+.product-descriprion {
+    width: 1100px;
+    margin-left: -10px;
+    padding-bottom: 100px;
+}
+
+.product-descriprion h3{
     font-family: 'DINPro-CondensedMedium';
-    font-size: 18px;
-    color: #666666;
+    color: #6C6E74;
+    font-size: 35px;
+    margin: 10px 0px;
+    font-weight: 500;
+}
+
+.product-descriprion p{
+    font-family: 'DINPro-CondensedMedium';
+    color: #231F20;
+    font-size: 25px;
+    text-indent: 30px;
 }
 
 
