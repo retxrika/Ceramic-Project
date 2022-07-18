@@ -27,9 +27,9 @@ urlpatterns = [
     path('contact/', views.contact, name='contact'),
     path('catalog/', include('catalog.urls'), name='catalog'),
     path('cart/', include('cart.urls'), name='cart'),
-    path('partners/', views.partners, name='partners'),
     path('pay/', views.pay, name='pay'),
     path('pay-redirect/', views.pay_redirect, name='pay_redirect'),
+    path('partners/', include('partners.urls'), name='partners')
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

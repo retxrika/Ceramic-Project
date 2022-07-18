@@ -11,7 +11,7 @@ import uuid
 from yookassa import Configuration, Payment, payment
 from django.core.mail import send_mail
 from .payments import Pay, SaveForm, GetCart, GetOrder
-from .models import About, Slider, NumberOrder, Partner
+from .models import About, Slider, NumberOrder
 
 # 5555555555554444
 
@@ -88,11 +88,11 @@ def home(request):
     context = {'categorys' : categorys, 'slider' : slider}
     return render(request, 'main/home.html', context)
 
-def partners(request):
-    partners = Partner.objects.order_by()
-    categorys = Category.objects.order_by()
-    context = {'categorys' : categorys, 'partners' : partners}
-    return render(request, 'main/partners.html', context)
+# def partners(request):
+#     partners = Partner.objects.order_by()
+#     categorys = Category.objects.order_by()
+#     context = {'categorys' : categorys, 'partners' : partners}
+#     return render(request, 'main/partners.html', context)
 
 def about(request):
     abouts = About.objects.order_by()
