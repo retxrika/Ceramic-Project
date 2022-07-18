@@ -557,11 +557,10 @@
 .add-to-cart {
     background-color: #569192;
     border: 0 none;
-    width: 100px;
+    width: 110px;
     height: 35px;
     border-style: solid;
     color: #FFFFFF;
-    border-radius: 0.3em;
 }
 
 
@@ -600,80 +599,74 @@ hr.product-line {
     margin-bottom: 10px;
 }
 
-.product-detail {
+.product {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    font-family: 'DINPro-CondensedMedium', "Segoe UI", Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    margin: 32px 0;
+}
+
+.product-images > img {
+    width: 90%;
+    height: auto;
+}
+
+.product-images-bottom {
     display: flex;
-    padding-bottom: 50px;
-    align-items: center;
+    padding: 20px;
+    margin-left: -20px;
 }
 
-.product-detail-images-top {
-    padding-bottom: 25px;
+.product-images-bottom img {
+    width: 80%;
+    height: auto;
 }
 
-.product-detail-images-bottom {
-    margin-left: -10px;
-    display: flex;
+.product-info {
+    margin-left: 10px;
 }
 
-.product-detail-images-bottom a {
-    margin: 10px;
-}
-
-.product-detail-info {
-    width: 60%;
-    margin: 30px;
-}
-
-.product-detail-info-title {
-    font-family: 'DINPro-CondensedMedium';
-    font-weight: 500;
-    font-size: 55px;
-    color: #569192;
-    padding-bottom: 5px;
-}
-
-.product-detail-info-compos {
-    padding-bottom: 20px;
-}
-
-.product-detail-info-compos-title{
-    font-family: 'DINPro-CondensedMedium';
-    font-size: 28px;
-    color: #6C6D70;
-    padding-bottom: 130px;
-    font-weight: 500;
-} 
-
-.product-detail-info-compos-price {
-    font-family: 'DINPro-CondensedMedium';
+.product-info h3 {
     font-size: 40px;
     color: #569192;
+    font-weight: normal;
 }
 
-.product-detail-info-compos-chars {
-    padding-bottom: 30px;
+.product-info-compos {
+    padding-bottom: 35px;
 }
 
-.product-detail-info-order h4 {
-    font-family: 'DINPro-CondensedMedium';
-    font-weight: 550;
+.product-info-compos > p:first-child{
+    font-size: 25px;
+    color: #6C6D70;
+    padding-bottom: 80px;
+} 
+
+.product-info-compos-price {
     font-size: 35px;
-    margin: 10px auto;
     color: #569192;
 }
 
-.product-detail-info-compos-chars p {
-    font-family: 'DINPro-CondensedMedium';
-    font-size: 28px;
+.product-info-compos-chars p {
+    font-size: 25px;
     color: #6C6D70;
 }
 
-.product-detail-info-order-add-cart {
+.product-info-order h4 {
+    font-size: 30px;
+    margin: 10px auto;
+    color: #569192;
+    font-weight: normal;
+}
+
+
+.product-info-order-add-cart {
     display: flex;
     align-items: center;
 }
 
-.product-detail-info-add-cart-btn {
+.product-info-add-cart-btn {
     background-color: #569192;
     border: 0 none;
     width: 150px;
@@ -681,12 +674,11 @@ hr.product-line {
     border-style: solid;
     color: #FFFFFF;
     font-size: 25px;
-    font-family: 'DINPro-CondensedMedium';
 }
 
 #w {
     width: 150px;
-    height: 45px;;
+    height: 45px;
 }
 
 #w label{
@@ -694,26 +686,13 @@ hr.product-line {
 }
 
 #id_quantity {
-    display: flex; 
     text-align-last: center;
-    font-size: 16px; 
-    font-family: sans-serif; 
-    font-weight: 700; 
-    color: #444; 
-    padding: .6em 1.4em .5em .8em; width: 100%; 
-    max-width: 100%; 
+    font-size: 20px; 
+    font-weight: bold;
+    width: 100%;  
     height: 45px;
-    box-sizing: border-box; 
-    margin: 0; 
-    border: 1px solid #aaa;
-    box-shadow: 0 1px 0 1px rgba(0,0,0,.04); 
-    -moz-appearance: none;
     -webkit-appearance: none;
-    appearance: none;
-    background-color: #fff; 
-    background-repeat: no-repeat, repeat;
-    /* background-position: right .7em top 50%, 0 0; */
-    background-size: .65em auto, 100%; 
+    color: #6C6D70; 
 }
 
 .product-descriprion {
@@ -959,8 +938,11 @@ button.cart-cost-pay:active {
     font-family: 'DINPro-CondensedMedium', "Segoe UI", Arial, Helvetica, sans-serif;
     font-size: 24px;
     width: 100%;
-    max-width: fit-content;
     margin: 0 auto;
+}
+
+.contacts-block-info {
+    margin-left: 190px;
 }
 
 .contacts-maps-container {

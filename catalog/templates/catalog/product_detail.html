@@ -11,47 +11,43 @@
 
     <hr class="product-line">
     
-    <div class="product-detail">
-        <div>
-            <div class="product-detail-images-top">
+    <div class="product">
+        <div class="product-images">
+            <img src="{{ product.image.url }}" alt="">
+            <div class="product-images-bottom">
                 <a href="{% url 'catalog:product_detail' product.slug %}">
-                    <img src="{{ product.image.url }}" alt="" height="381" width="381">
-                </a>
-            </div>
-            <div class="product-detail-images-bottom">
-                <a href="{% url 'catalog:product_detail' product.slug %}">
-                    <img src="{{ product.image.url }}" alt="" height="80" width="80">
+                    <img src="{{ product.image.url }}" alt="">
                 </a>
                 <a href="{% url 'catalog:product_detail' product.slug %}">
-                    <img src="{{ product.image.url }}" alt="" height="80" width="80">
+                    <img src="{{ product.image.url }}" alt="">
                 </a>
                 <a href="{% url 'catalog:product_detail' product.slug %}">
-                    <img src="{{ product.image.url }}" alt="" height="80" width="80">
+                    <img src="{{ product.image.url }}" alt="">
                 </a>
                 <a href="{% url 'catalog:product_detail' product.slug %}">
-                    <img src="{{ product.image.url }}" alt="" height="80" width="80">
+                    <img src="{{ product.image.url }}" alt="">
                 </a>
             </div>
         </div>
         
-        <div class="product-detail-info">
-            <h3 class="product-detail-info-title">{{ product.title }}</h3>
-            <div class="product-detail-info-compos">
-                <p class="product-detail-info-compos-title">Состав:</p>
-                <p class='product-detail-info-compos-price'>₽ {{ product.price }}</p>
-                <div class="product-detail-info-compos-chars">
+        <div class="product-info">
+            <h3>{{ product.title }}</h3>
+            <div class="product-info-compos">
+                <p>Состав:</p>
+                <p class='product-info-compos-price'>₽ {{ product.price }}</p>
+                <div class="product-info-compos-chars">
                     <p>Размер изделия: 20*100*100</p>
                     <p>Состав: Тубус</p>
                     <p>Состав: 22*12</p>
                 </div>
             </div>
-            <div class="product-detail-info-order">
+            <div class="product-info-order">
                 <h4>Доступно для предзаказа</h4>
                 <form action="{% url 'cart:cart_add' product.id %}" method="post">
-                    <div class="product-detail-info-order-add-cart">
+                    <div class="product-info-order-add-cart">
                         <p id="w">{{ cart_product_form }}</p>
                         {% csrf_token %}
-                        <input type="submit" value="В корзину" class="product-detail-info-add-cart-btn">
+                        <input type="submit" value="В корзину" class="product-info-add-cart-btn">
                     </div>
                 </form>
             </div>
