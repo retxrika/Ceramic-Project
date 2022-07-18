@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+    <div class="container-fluid">
+        {{ category.name }}
+        {{ category.descriprion }}
+
+        {% for item in products %}
+            {% if category.name == item.category.name %}
+                <img src="{{ item.image.url }}" alt="" width="200" height="200">
+                {{ item.name }}
+                <a href="{{ item.file.url }}">Скачать коллекцию pdf</a>
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endblock %}
