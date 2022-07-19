@@ -465,7 +465,7 @@
     color: #6C6D70;     
     font-weight: bold;
     font-family: "DINPro-CondensedMedium";
-    font-size: 30px;
+    font-size: 35px;
     text-transform: uppercase;
     text-align: center;
     margin-top: 40px;
@@ -579,6 +579,7 @@
     color: #FFFFFF;
     font-size: 17px;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .add-to-cart:hover {
@@ -643,9 +644,8 @@ hr.product-line {
     margin-left: -20px;
 }
 
-.product-images-bottom img {
-    width: 80%;
-    height: auto;
+.product-images-bottom img:not(:last-child) {
+    margin-right: 15px;
 }
 
 .product-info {
@@ -705,6 +705,7 @@ hr.product-line {
     color: #FFFFFF;
     font-size: 21px;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .product-info-add-cart-btn:hover {
@@ -1144,7 +1145,7 @@ button.cart-cost-pay:active {
     margin: auto;
     font-family: 'DINPro-CondensedMedium', "Segoe UI", Arial, Helvetica, sans-serif;
     text-align: center;
-    font-size: 24px;
+    font-size: 21px;
     color: #569192;
 }
 .partners-detail-item img{
@@ -1156,8 +1157,11 @@ button.cart-cost-pay:active {
     font-weight: bold;
 }
 .partners-description {
-    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    font-size: 20px;
+    margin-top: 25px;
+    padding-bottom: 25px;
+    text-align: center;
+    color: #231F20;
 }
 .partners-link {
     background: #E6E7E9;
