@@ -19,12 +19,20 @@ class Category(models.Model):
 
 class Product(models.Model):
     category = models.ForeignKey(Category, verbose_name='Категория', on_delete=models.CASCADE)
-    image = models.ImageField(upload_to='catalog/images', verbose_name='Изображение товара', null=True)
+    image = models.ImageField(upload_to='catalog/images', verbose_name='Изображение товара(Главное)', null=True)
+    image_2 =  models.ImageField(upload_to='catalog/images', verbose_name='Изображение товара(Дополнительное)', null=True, blank=True)
+    image_3 =  models.ImageField(upload_to='catalog/images', verbose_name='Изображение товара(Дополнительное)', null=True, blank=True)
+    image_4 =  models.ImageField(upload_to='catalog/images', verbose_name='Изображение товара(Дополнительное)', null=True, blank=True)
+    image_5 =  models.ImageField(upload_to='catalog/images', verbose_name='Изображение товара(Дополнительное)', null=True, blank=True)
     title = models.CharField(max_length=250, verbose_name='Имя товара')
     size = models.CharField(max_length=250, verbose_name='Размеры товара', null=True)
+    package = models.CharField(max_length=250, verbose_name='Упаковка товара', null=True)
+    size_of_package = models.CharField(max_length=250, verbose_name='Размер упаковки товара', null=True)
+    compound = models.CharField(max_length=250, verbose_name='Состав', null=True, blank=True)
     descriprion = models.TextField(verbose_name='Описание товара', null=True)
     price = models.DecimalField(max_digits=9, decimal_places=2, verbose_name='Цена')
     slug = models.SlugField(unique=True, verbose_name='Текст для ссылки (введите название товара на английском)')
+    
 
     def __str__(self):
         return self.title
