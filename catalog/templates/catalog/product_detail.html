@@ -6,12 +6,8 @@
         <li class="">
             <a class="product-top-link" href="{% url 'catalog:catalog' %}">КАТАЛОГ</a>
         </li>
-<<<<<<< HEAD
         <p class="product-top-sep"></p>
         <p class="product-top-current">{{ product.category.name }}</p>
-=======
-        <p class="product-top-current">| {{ product.category.name }}</p>
->>>>>>> d62d11b0dfba0c3067d1ed5021176067ced714ce
     </div>
 
     <hr class="product-line">
@@ -36,19 +32,12 @@
         </div>
         
         <div class="product-info">
-<<<<<<< HEAD
             <h2>{{ product.title }}</h2>
             <div class="product-info-compos">
                 <p>Состав:</p>
                 <p class='product-info-compos-price'>
                     <span>&#8381</span> {{ product.price }}
                 </p>
-=======
-            <h3>{{ product.title }}</h3>
-            <div class="product-info-compos">
-                <p>Состав:</p>
-                <p class='product-info-compos-price'>₽ {{ product.price }}</p>
->>>>>>> d62d11b0dfba0c3067d1ed5021176067ced714ce
                 <div class="product-info-compos-chars">
                     <p>Размер изделия: 20*100*100</p>
                     <p>Состав: Тубус</p>
@@ -56,11 +45,7 @@
                 </div>
             </div>
             <div class="product-info-order">
-<<<<<<< HEAD
                 <h2>Доступно для предзаказа</h2>
-=======
-                <h4>Доступно для предзаказа</h4>
->>>>>>> d62d11b0dfba0c3067d1ed5021176067ced714ce
                 <form action="{% url 'cart:cart_add' product.id %}" method="post">
                     <div class="product-info-order-add-cart">
                         <p id="w">{{ cart_product_form }}</p>
