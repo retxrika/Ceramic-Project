@@ -22,7 +22,10 @@
     font-style: normal;
     font-weight: normal;
 } 
+<<<<<<< HEAD
 
+=======
+>>>>>>> d62d11b0dfba0c3067d1ed5021176067ced714ce
 /* @font-face {
     font-family: 'fontbf27039ecba4e6511abddd84122a8aac';
         
@@ -387,6 +390,7 @@
 
 .menu {
     display: flex;
+<<<<<<< HEAD
 }
 
 .menu li {
@@ -402,6 +406,15 @@
 .menu-link {
     color: #939598;
     font-size: 20px;
+=======
+}
+
+.menu-link {
+    color: #939598;  
+    padding-left: 10px;
+    font-family: 'DINPro-CondensedMedium';
+    font-size: 23px;
+>>>>>>> d62d11b0dfba0c3067d1ed5021176067ced714ce
 }
 
 .menu-link:hover {
@@ -411,7 +424,12 @@
 
 .separator {
     padding-left: 10px;
+<<<<<<< HEAD
     color: #636363;     
+=======
+    color: #636363;
+    font-family: 'DINPro-CondensedMedium';
+>>>>>>> d62d11b0dfba0c3067d1ed5021176067ced714ce
     font-size: 22px;
 }
 
@@ -511,6 +529,7 @@
 }
 
 .category-top-link {
+<<<<<<< HEAD
     color: #939598;     
     font-size: 20px;
 }
@@ -528,6 +547,19 @@
     font-size: 30px;
     font-weight: normal;
     text-transform: uppercase;
+=======
+    color: #939598;
+    font-family: 'DINPro-CondensedMedium';
+    font-size: 23px;
+}
+
+.category-top-current {
+    color: #696A6D;
+    font-family: 'DINPro-CondensedMedium';
+    font-size: 35px;
+    text-transform: uppercase;
+    margin-left: 7px;
+>>>>>>> d62d11b0dfba0c3067d1ed5021176067ced714ce
 }
 
 .category-top-link:hover {
@@ -578,12 +610,15 @@
     height: 35px;
     border-style: solid;
     color: #FFFFFF;
+<<<<<<< HEAD
     font-size: 17px;
     transition: 0.3s;
 }
 
 .add-to-cart:hover {
     background-color: #487f80;
+=======
+>>>>>>> d62d11b0dfba0c3067d1ed5021176067ced714ce
 }
 
 
@@ -595,6 +630,7 @@
     justify-content: flex-start;
     margin-top: 25px;
     margin-bottom: 15px;
+<<<<<<< HEAD
 }
 
 .product-top-link {
@@ -692,6 +728,97 @@ hr.product-line {
 }
 
 
+=======
+    margin-left: 0px;
+}
+
+.product-top-link {
+    color: #939598;
+    font-family: 'DINPro-CondensedMedium';
+    font-size: 23px;
+}
+
+.product-top-current {
+    color: #696A6D;
+    font-family: 'DINPro-CondensedMedium';
+    font-size: 35px;
+    text-transform: uppercase;
+    margin-left: 7px;
+}
+
+.product-top-link:hover {
+    color: #696A6D;  
+    transition: 0.3s;  
+}
+
+hr.product-line {
+    border: 15px solid #7BC4BE;
+    margin-bottom: 10px;
+}
+
+.product {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    font-family: 'DINPro-CondensedMedium', "Segoe UI", Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    margin: 32px 0;
+}
+
+.product-images > img {
+    width: 90%;
+    height: auto;
+}
+
+.product-images-bottom {
+    display: flex;
+    padding: 20px;
+    margin-left: -20px;
+}
+
+.product-images-bottom img {
+    width: 80%;
+    height: auto;
+}
+
+.product-info {
+    margin-left: 10px;
+}
+
+.product-info h3 {
+    font-size: 40px;
+    color: #569192;
+    font-weight: normal;
+}
+
+.product-info-compos {
+    padding-bottom: 35px;
+}
+
+.product-info-compos > p:first-child{
+    font-size: 25px;
+    color: #6C6D70;
+    padding-bottom: 80px;
+} 
+
+.product-info-compos-price {
+    font-size: 35px;
+    color: #569192;
+}
+
+.product-info-compos-chars p {
+    font-size: 25px;
+    color: #6C6D70;
+}
+
+.product-info-order h4 {
+    font-size: 30px;
+    margin: 10px auto;
+    color: #569192;
+    font-weight: normal;
+}
+
+
+>>>>>>> d62d11b0dfba0c3067d1ed5021176067ced714ce
 .product-info-order-add-cart {
     display: flex;
     align-items: center;
@@ -704,12 +831,16 @@ hr.product-line {
     height: 45px;
     border-style: solid;
     color: #FFFFFF;
+<<<<<<< HEAD
     font-size: 21px;
     transition: 0.3s;
 }
 
 .product-info-add-cart-btn:hover {
     background-color: #487f80;
+=======
+    font-size: 25px;
+>>>>>>> d62d11b0dfba0c3067d1ed5021176067ced714ce
 }
 
 #w {
@@ -737,16 +868,30 @@ hr.product-line {
     padding-bottom: 100px;
 }
 
+<<<<<<< HEAD
 .product-descriprion h3{     
     color: #6C6E74;
     font-size: 32px;
+=======
+.product-descriprion h3{
+    font-family: 'DINPro-CondensedMedium';
+    color: #6C6E74;
+    font-size: 35px;
+>>>>>>> d62d11b0dfba0c3067d1ed5021176067ced714ce
     margin: 10px 0px;
     font-weight: 500;
 }
 
+<<<<<<< HEAD
 .product-descriprion p{     
     color: #231F20;
     font-size: 22px;
+=======
+.product-descriprion p{
+    font-family: 'DINPro-CondensedMedium';
+    color: #231F20;
+    font-size: 25px;
+>>>>>>> d62d11b0dfba0c3067d1ed5021176067ced714ce
     text-indent: 30px;
 }
 
@@ -974,7 +1119,10 @@ button.cart-cost-pay:active {
 }
 
 .contacts-block-info {
+<<<<<<< HEAD
     margin-top: 40px;
+=======
+>>>>>>> d62d11b0dfba0c3067d1ed5021176067ced714ce
     margin-left: 190px;
 }
 
@@ -1132,4 +1280,41 @@ button.cart-cost-pay:active {
     display: flex;
     justify-content: right;
     align-items:flex-end;
+}
+
+.partners-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 32px;
+}
+.partners-detail-item .partners-detail-item-body{
+    width: 100%;
+    max-width: 250px;
+    margin: auto;
+    font-family: 'DINPro-CondensedMedium', "Segoe UI", Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 24px;
+    color: #569192;
+}
+.partners-detail-item img{
+    width: 100%!important;
+    height: auto;
+}
+.partners-detail-item p{
+    height: 24px;
+    font-weight: bold;
+}
+.partners-description {
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+.partners-link {
+    background: #E6E7E9;
+}
+.partners-link a {
+    color: #569192!important;
+}
+.partners-link a:hover{
+    color: #569192!important;
+    text-decoration: underline;
 }

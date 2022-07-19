@@ -2,6 +2,7 @@
 
 {% block content %}
     <div class="container-fluid">
+<<<<<<< HEAD
         {{ category.name }}
         {{ category.descriprion }}
 
@@ -12,5 +13,33 @@
                 <a href="{{ item.file.url }}">Скачать коллекцию pdf</a>
             {% endif %}
         {% endfor %}
+=======
+        <h1 class="title-of-page">
+            {{ category.name }}
+        </h1>
+        <p class="partners-description">
+            {{ category.descriprion }}
+        </p>
+        <div class="partners-detail-grid">
+            {% for item in products %}
+                {% if category.name == item.category.name %}
+                    <div class="partners-detail-item">
+                        <div class="partners-detail-item-body">
+                            <img src="{{ item.image.url }}" alt="item image">
+                            <p>
+                                {{ item.title }}
+                            </p>
+                            <div class="partners-link">
+                                <a href="{{ item.file.url }}">
+                                    Скачать коллекцию .pdf
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        
+>>>>>>> d62d11b0dfba0c3067d1ed5021176067ced714ce
     </div>
 {% endblock %}
