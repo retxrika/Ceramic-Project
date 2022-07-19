@@ -9,6 +9,7 @@
     font-family: 'DINPro-CondensedMedium';
     src: url("../fonts/bf27039ecba4e6511abddd84122a8aac.eot") format("truetype");
 } */
+
 @font-face { 
     font-family: "DINPro-CondensedMedium";
     src: url("../fonts/DINProCondensedRegular/DINProCondensedRegular.eot");
@@ -17,7 +18,7 @@
     url("../fonts/DINProCondensedRegular.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
-}
+} 
 /* @font-face {
     font-family: 'fontbf27039ecba4e6511abddd84122a8aac';
         
@@ -34,6 +35,12 @@
 
 .container-fluid {
     width: 950px;
+    margin: 0 auto;
+}
+
+.container-fluid-product {
+    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -381,24 +388,23 @@
 
 .menu {
     display: flex;
-    
 }
 
 .menu-link {
+    color: #939598;  
     padding-left: 10px;
-    color: #636363;
     font-family: 'DINPro-CondensedMedium';
     font-size: 23px;
 }
 
 .menu-link:hover {
-    color: black;  
+    color: #636363;
     transition: 0.3s;  
 }
 
 .separator {
     padding-left: 10px;
-    color: black;
+    color: #636363;
     font-family: 'DINPro-CondensedMedium';
     font-size: 22px;
 }
@@ -489,22 +495,32 @@
 
 /* Страница товаров на выбранной категории */
 
-.product {
-    /*  */
-}
-
-.name-sort-block {
-    padding-top: 25px;
-    padding-bottom: 25px;
+.category-top {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
+    justify-content: flex-start;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: -72px;
 }
 
-.name-sort-block h1 {
+.category-top-link {
+    color: #939598;
     font-family: 'DINPro-CondensedMedium';
-    font-size: 45px;
-    font-weight: 500;
+    font-size: 23px;
+}
+
+.category-top-current {
+    color: #696A6D;
+    font-family: 'DINPro-CondensedMedium';
+    font-size: 35px;
+    text-transform: uppercase;
+    margin-left: 7px;
+}
+
+.category-top-link:hover {
+    color: #696A6D;  
+    transition: 0.3s;  
 }
 
 
@@ -539,149 +555,165 @@
 }
 
 .add-to-cart {
-    background-color: #999698;
+    background-color: #569192;
     border: 0 none;
-    width: 100px;
+    width: 110px;
     height: 35px;
     border-style: solid;
     color: #FFFFFF;
-    border-radius: 0.3em;
 }
 
 
 /* Детальная информация о товаре */
 
-.title-of-product-detail {
-    color: black;
-    font-family: 'DINPro-CondensedMedium';
-    font-weight: 550;
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 35px;
-    margin-top: 35px;
-    font-size: 30px;
-}
-
-.product-item-detail {
+.product-top {
     display: flex;
-    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: flex-start;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    margin-left: 0px;
 }
 
-.info-of-product-detail {
-    width: 60%;
-    margin: 0 auto;
-}
-
-.product-title-detail {
-    padding-bottom: 23px;
+.product-top-link {
+    color: #939598;
     font-family: 'DINPro-CondensedMedium';
-    font-weight: 550;
-    font-size: 48px;
+    font-size: 23px;
 }
 
-.product-price-detail {
-    padding-bottom: 23px;
+.product-top-current {
+    color: #696A6D;
     font-family: 'DINPro-CondensedMedium';
+    font-size: 35px;
+    text-transform: uppercase;
+    margin-left: 7px;
+}
+
+.product-top-link:hover {
+    color: #696A6D;  
+    transition: 0.3s;  
+}
+
+hr.product-line {
+    border: 15px solid #7BC4BE;
+    margin-bottom: 10px;
+}
+
+.product {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    font-family: 'DINPro-CondensedMedium', "Segoe UI", Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    margin: 32px 0;
+}
+
+.product-images > img {
+    width: 90%;
+    height: auto;
+}
+
+.product-images-bottom {
+    display: flex;
+    padding: 20px;
+    margin-left: -20px;
+}
+
+.product-images-bottom img {
+    width: 80%;
+    height: auto;
+}
+
+.product-info {
+    margin-left: 10px;
+}
+
+.product-info h3 {
+    font-size: 40px;
+    color: #569192;
+    font-weight: normal;
+}
+
+.product-info-compos {
+    padding-bottom: 35px;
+}
+
+.product-info-compos > p:first-child{
+    font-size: 25px;
+    color: #6C6D70;
+    padding-bottom: 80px;
+} 
+
+.product-info-compos-price {
+    font-size: 35px;
+    color: #569192;
+}
+
+.product-info-compos-chars p {
+    font-size: 25px;
+    color: #6C6D70;
+}
+
+.product-info-order h4 {
     font-size: 30px;
+    margin: 10px auto;
+    color: #569192;
+    font-weight: normal;
 }
 
-.size-of-product {
-    padding-bottom: 23px;
-    font-family: 'DINPro-CondensedMedium';
-    font-size: 20px;
-    color: #666666;
-}
 
-.title-of-descriprion-detail {
-    width: 100%;
-    background-color: #F6F6F6;
-    height: 55px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-}
-
-.title-of-product-detail-1 {
-    background-color: white;
-    width: 10%;
-    height: 100%;
+.product-info-order-add-cart {
     display: flex;
     align-items: center;
-    text-align: center;
-    border-top: 2px solid black;
-
 }
 
-.title-of-product-detail-1 h4{
-    font-family: 'DINPro-CondensedMedium';
-    font-size: 24px;
-    font-weight: 550;
-    margin: 0 auto;
-}
-
-.descriprion-of-product-detail p{
-    font-family: 'DINPro-CondensedMedium';
-    color: #666666;
-    font-size: 18px;
-}
-
-.add-to-cart-1 {
-    background-color: #999698;
+.product-info-add-cart-btn {
+    background-color: #569192;
     border: 0 none;
-    width: 110px;
+    width: 150px;
     height: 45px;
     border-style: solid;
     color: #FFFFFF;
-    border-radius: 0.3em;
-    font-size: 15px;
-}
-
-.add-cart-block-detail {
-    display: flex;
-    align-items: center;
+    font-size: 25px;
 }
 
 #w {
-    padding-right: 15px;
+    width: 150px;
+    height: 45px;
 }
 
 #w label{
     display: none;
 }
 
-.cart_product_form {
-    font-weight:bold;
-}
-
 #id_quantity {
-    display: flex; 
     text-align-last: center;
-    font-size: 16px; 
-    font-family: sans-serif; 
-    font-weight: 700; 
-    color: #444; 
-    padding: .6em 1.4em .5em .8em; width: 100%; 
-    max-width: 100%; 
+    font-size: 20px; 
+    font-weight: bold;
+    width: 100%;  
     height: 45px;
-    box-sizing: border-box; 
-    margin: 0; 
-    border: 1px solid #aaa;
-    box-shadow: 0 1px 0 1px rgba(0,0,0,.04); 
-    border-radius: .5em;
-    -moz-appearance: none;
     -webkit-appearance: none;
-    appearance: none;
-    background-color: #fff; 
-    background-repeat: no-repeat, repeat;
-    /* background-position: right .7em top 50%, 0 0; */
-    background-size: .65em auto, 100%; 
-
+    color: #6C6D70; 
 }
 
-.category-of-product {
-    padding-top: 23px;
+.product-descriprion {
+    width: 1100px;
+    margin-left: -10px;
+    padding-bottom: 100px;
+}
+
+.product-descriprion h3{
     font-family: 'DINPro-CondensedMedium';
-    font-size: 18px;
-    color: #666666;
+    color: #6C6E74;
+    font-size: 35px;
+    margin: 10px 0px;
+    font-weight: 500;
+}
+
+.product-descriprion p{
+    font-family: 'DINPro-CondensedMedium';
+    color: #231F20;
+    font-size: 25px;
+    text-indent: 30px;
 }
 
 
@@ -906,8 +938,11 @@ button.cart-cost-pay:active {
     font-family: 'DINPro-CondensedMedium', "Segoe UI", Arial, Helvetica, sans-serif;
     font-size: 24px;
     width: 100%;
-    max-width: fit-content;
     margin: 0 auto;
+}
+
+.contacts-block-info {
+    margin-left: 190px;
 }
 
 .contacts-maps-container {
