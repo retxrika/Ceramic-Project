@@ -3,10 +3,13 @@
     margin: 0;
     text-decoration: none;
     list-style-type: none;
+    font-family: 'Akrobat', sans-serif;
+    font-stretch: ultra-condensed;
 }
 
-/* @font-face {
-    font-family: 'DINPro-CondensedMedium';
+@import url('http://fonts.cdnfonts.com/css/akrobat');
+
+/* @font-face {     
     src: url("../fonts/bf27039ecba4e6511abddd84122a8aac.eot") format("truetype");
 } */
 
@@ -19,6 +22,7 @@
     font-style: normal;
     font-weight: normal;
 } 
+
 /* @font-face {
     font-family: 'fontbf27039ecba4e6511abddd84122a8aac';
         
@@ -27,7 +31,7 @@
                 url('https://nomail.com.ua/files/woff2/bf27039ecba4e6511abddd84122a8aac.woff2') format('woff2');
     }
     
-    @font-face { font-family: 'DINPro-CondensedMedium';  src: local('DINPro-CondensedMedium'), url('https://nomail.com.ua/files/woff/bf27039ecba4e6511abddd84122a8aac.woff') format('woff'); } */    
+@font-face {    src: local('DINPro-CondensedMedium'), url('https://nomail.com.ua/files/woff/bf27039ecba4e6511abddd84122a8aac.woff') format('woff'); } */    
 
 /* base.html */
 
@@ -95,13 +99,13 @@
 }
 
 .number {
-    font-family: 'DINPro-CondensedMedium';
     font-weight: 550;
+    font-family: "DINPro-CondensedMedium";
 }
 
 .text-top {
-    font-family: 'DINPro-CondensedMedium';
-    font-weight: 100;  
+    font-weight: 100;
+    font-family: "DINPro-CondensedMedium";
 }
 
 
@@ -134,8 +138,7 @@
 
 .len-cart-block span {
     margin: 0 auto;
-    color: white;
-    font-family: 'DINPro-CondensedMedium';
+    color: white;     
     font-size: 15px;
 }
 
@@ -214,8 +217,7 @@
 .contact-open-name {
     font-size: 22px;
     white-space: nowrap; 
-    padding: 6px 0px 0px 10px;
-    font-family: 'DINPro-CondensedMedium';
+    padding: 6px 0px 0px 10px;     
     color: #636363;
 }
 
@@ -242,8 +244,7 @@
     text-align: center;
     color: white;
     align-items: center;
-    justify-content: center;
-    font-family: 'DINPro-CondensedMedium';
+    justify-content: center;     
     font-size: 15px;
 }
 
@@ -272,8 +273,7 @@
     bottom: 0px;
     right: 0px;
     width: 400px;
-    display: none;
-    font-family: 'DINPro-CondensedMedium';
+    display: none;     
     color: #6C6D70;
 }
 
@@ -303,8 +303,7 @@
     align-items: center;
 }
 
-.cart-open-title h2 {
-    font-family: 'DINPro-CondensedMedium';
+.cart-open-title h2 {     
     font-size: 23px;
     color: white;
     font-weight: 100; 
@@ -390,11 +389,19 @@
     display: flex;
 }
 
-.menu-link {
-    color: #939598;  
+.menu li {
+    border-left: 2px solid #636363;
+    padding-right: 10px;
     padding-left: 10px;
-    font-family: 'DINPro-CondensedMedium';
-    font-size: 23px;
+}
+
+.menu li:first-child {
+    border-left: 0;
+}
+
+.menu-link {
+    color: #939598;
+    font-size: 20px;
 }
 
 .menu-link:hover {
@@ -404,8 +411,7 @@
 
 .separator {
     padding-left: 10px;
-    color: #636363;
-    font-family: 'DINPro-CondensedMedium';
+    color: #636363;     
     font-size: 22px;
 }
 
@@ -447,23 +453,23 @@
 /* Заголовок наши работы + блоки с работами */
 
 .home-slogan {
-    color: #636363;
-    font-family: 'DINPro-CondensedMedium';
+    color: #636363;     
     font-weight: 100;
     text-align: center;
-    margin-bottom: 30px;
-    margin-top: 30px;
+    font-family: "DINPro-CondensedMedium";
+    margin-bottom: 10px;
+    margin-top: 50px;
     font-size: 28px;
 }
 
 .title-of-page{
-    color: #636363;
-    font-family: 'DINPro-CondensedMedium';
-    font-weight: 550;
+    color: #6C6D70;     
+    font-weight: bold;
+    font-family: "DINPro-CondensedMedium";
+    font-size: 30px;
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .works-main-block {
@@ -482,10 +488,10 @@
 }
 
 .category-name {
-    width: 270px;
-    font-family: 'DINPro-CondensedMedium';
+    width: 270px;     
     font-weight: 500;
-    font-size: 26px;
+    font-size: 23px;
+    margin-top: 15px;
     color: #409a9b;
 }
 
@@ -505,17 +511,23 @@
 }
 
 .category-top-link {
-    color: #939598;
-    font-family: 'DINPro-CondensedMedium';
-    font-size: 23px;
+    color: #939598;     
+    font-size: 20px;
 }
 
-.category-top-current {
-    color: #696A6D;
-    font-family: 'DINPro-CondensedMedium';
-    font-size: 35px;
-    text-transform: uppercase;
+.category-top-sep {
+    border-right: 0.4ex solid #636363;
+    height: 22px;
     margin-left: 7px;
+    margin-right: 7px;
+}
+ 
+
+.category-top h3 {
+    color: #696A6D;     
+    font-size: 30px;
+    font-weight: normal;
+    text-transform: uppercase;
 }
 
 .category-top-link:hover {
@@ -538,20 +550,25 @@
 }
 
 .product-title {
-    width: 270px;
-    font-family: 'DINPro-CondensedMedium';
+    width: 270px;     
     font-weight: 500;
     font-size: 25px;
+    padding-top: 10px;
     padding-bottom: 6px;
     color: #409a9b;
 }
 
 .product-price {
     padding-bottom: 10px;
-    width: 270px;
-    font-family: 'DINPro-CondensedMedium';
+    width: 270px;     
     font-weight: 500;
-    font-size: 22px;
+    font-size: 20px;
+    color: #57585A;
+}
+
+.product-price span {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 23px;
 }
 
 .add-to-cart {
@@ -561,6 +578,12 @@
     height: 35px;
     border-style: solid;
     color: #FFFFFF;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #487f80;
 }
 
 
@@ -572,21 +595,24 @@
     justify-content: flex-start;
     margin-top: 25px;
     margin-bottom: 15px;
-    margin-left: 0px;
 }
 
 .product-top-link {
-    color: #939598;
-    font-family: 'DINPro-CondensedMedium';
-    font-size: 23px;
+    color: #939598;     
+    font-size: 20px;
+}
+
+.product-top-sep {
+    border-right: 0.4ex solid #636363;
+    height: 22px;
+    margin-left: 7px;
+    margin-right: 7px;
 }
 
 .product-top-current {
-    color: #696A6D;
-    font-family: 'DINPro-CondensedMedium';
-    font-size: 35px;
+    color: #696A6D;     
+    font-size: 30px;
     text-transform: uppercase;
-    margin-left: 7px;
 }
 
 .product-top-link:hover {
@@ -627,8 +653,8 @@ hr.product-line {
     margin-left: 10px;
 }
 
-.product-info h3 {
-    font-size: 40px;
+.product-info h2 {
+    font-size: 37px;
     color: #569192;
     font-weight: normal;
 }
@@ -638,26 +664,31 @@ hr.product-line {
 }
 
 .product-info-compos > p:first-child{
-    font-size: 25px;
+    font-size: 23px;
     color: #6C6D70;
     padding-bottom: 80px;
 } 
 
 .product-info-compos-price {
-    font-size: 35px;
+    font-size: 32px;
     color: #569192;
+}
+
+.product-info-compos-price span {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 37px;
 }
 
 .product-info-compos-chars p {
-    font-size: 25px;
+    font-size: 22px;
     color: #6C6D70;
 }
 
-.product-info-order h4 {
-    font-size: 30px;
-    margin: 10px auto;
+.product-info-order h2 {
+    font-size: 27px;
+    margin: 18px auto;
     color: #569192;
-    font-weight: normal;
+    font-weight: 600;
 }
 
 
@@ -673,7 +704,12 @@ hr.product-line {
     height: 45px;
     border-style: solid;
     color: #FFFFFF;
-    font-size: 25px;
+    font-size: 21px;
+    transition: 0.3s;
+}
+
+.product-info-add-cart-btn:hover {
+    background-color: #487f80;
 }
 
 #w {
@@ -701,18 +737,16 @@ hr.product-line {
     padding-bottom: 100px;
 }
 
-.product-descriprion h3{
-    font-family: 'DINPro-CondensedMedium';
+.product-descriprion h3{     
     color: #6C6E74;
-    font-size: 35px;
+    font-size: 32px;
     margin: 10px 0px;
     font-weight: 500;
 }
 
-.product-descriprion p{
-    font-family: 'DINPro-CondensedMedium';
+.product-descriprion p{     
     color: #231F20;
-    font-size: 25px;
+    font-size: 22px;
     text-indent: 30px;
 }
 
@@ -740,15 +774,13 @@ hr.product-line {
 }
 
 .name-order-block {
-    text-align: center;
-    font-family: 'DINPro-CondensedMedium';
+    text-align: center;     
     font-weight: 500;
     font-size: 27px;
 }
 
 /* детали(форма) заполнения заказа*/
-.title-input {
-    font-family: 'DINPro-CondensedMedium';
+.title-input {     
     font-weight: 500;
     font-size: 23px;
     color: rgb(54, 54, 54);
@@ -936,12 +968,13 @@ button.cart-cost-pay:active {
 
 .contacts-block {
     font-family: 'DINPro-CondensedMedium', "Segoe UI", Arial, Helvetica, sans-serif;
-    font-size: 24px;
+    font-size: 21px;
     width: 100%;
     margin: 0 auto;
 }
 
 .contacts-block-info {
+    margin-top: 40px;
     margin-left: 190px;
 }
 
@@ -964,9 +997,8 @@ button.cart-cost-pay:active {
     display: grid;
     grid-template-columns: 2fr 1.5fr;
     font-family: 'DINPro-CondensedMedium', "Segoe UI", Arial, Helvetica, sans-serif;
-    font-size: 24px;
-    margin: 32px 0;
-
+    font-size: 22px;
+    margin: 40px 0;
 }
 
 .about-photo {
@@ -974,6 +1006,7 @@ button.cart-cost-pay:active {
     display: flex;
     justify-content: center;
 }
+
 .about-photo img {
     width: 100%;
     max-width: 90%;

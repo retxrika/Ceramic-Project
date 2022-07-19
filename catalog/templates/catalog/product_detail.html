@@ -6,7 +6,8 @@
         <li class="">
             <a class="product-top-link" href="{% url 'catalog:catalog' %}">КАТАЛОГ</a>
         </li>
-        <p class="product-top-current">| {{ product.category.name }}</p>
+        <p class="product-top-sep"></p>
+        <p class="product-top-current">{{ product.category.name }}</p>
     </div>
 
     <hr class="product-line">
@@ -31,10 +32,12 @@
         </div>
         
         <div class="product-info">
-            <h3>{{ product.title }}</h3>
+            <h2>{{ product.title }}</h2>
             <div class="product-info-compos">
                 <p>Состав:</p>
-                <p class='product-info-compos-price'>₽ {{ product.price }}</p>
+                <p class='product-info-compos-price'>
+                    <span>&#8381</span> {{ product.price }}
+                </p>
                 <div class="product-info-compos-chars">
                     <p>Размер изделия: 20*100*100</p>
                     <p>Состав: Тубус</p>
@@ -42,7 +45,7 @@
                 </div>
             </div>
             <div class="product-info-order">
-                <h4>Доступно для предзаказа</h4>
+                <h2>Доступно для предзаказа</h2>
                 <form action="{% url 'cart:cart_add' product.id %}" method="post">
                     <div class="product-info-order-add-cart">
                         <p id="w">{{ cart_product_form }}</p>

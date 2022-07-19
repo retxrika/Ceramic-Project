@@ -28,29 +28,23 @@
           <!-- Лого + меню -->
           <div class="logo-menu">
               <a href="{% url 'home' %}"><img src="{% static 'images/log.png'%}" alt="" height="60" width="78" ></a>
-          <div>
               <ul class="menu">
                   <li class="">
                       <a class="menu-link"href="{% url 'home' %}">НА ГЛАВНУЮ</a>
                   </li>
-                  <span class="separator">|</span>
                   <li class="">
                       <a class="menu-link" href="{% url 'catalog:catalog' %}">КАТАЛОГ</a>
                   </li>
-                  <span class="separator">|</span>
                   <li class="">
                       <a class="menu-link" href="{% url 'partners:partners' %}">ПАРТНЕРАМ</a>
                   </li>
-                  <span class="separator">|</span>
                   <li class="">
                       <a class="menu-link" href="{% url 'about' %}">О МАСТЕРСКОЙ</a>
                   </li>
-                  <span class="separator">|</span>
                   <li class="">
                       <a class="menu-link" href="{% url 'contact' %}">КОНТАКТЫ</a>
                   </li>
               </ul>
-          </div>
           </div>
       </div>
     </div>
