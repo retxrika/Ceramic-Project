@@ -13,32 +13,55 @@
     
     <div class="product">
         <div class="product-images">
-            <img src="{{ product.image.url }}" alt="">
+            <img src="{{ product.image.url }}" alt="" id="image">
             <div class="product-images-bottom">
-                <a href="{% url 'catalog:product_detail' product.slug %}">
-                    <img src="{{ product.image.url }}" alt="">
+                <a href="#">
+                    <img src="{{ product.image_2.url }}" alt="" onclick="image1()" id="image1" >
                 </a>
-                <a href="{% url 'catalog:product_detail' product.slug %}">
-                    <img src="{{ product.image.url }}" alt="">
+                <a href="#">
+                    <img src="{{ product.image_3.url }}" alt="" onclick="image2()" id="image2">
                 </a>
-                <a href="{% url 'catalog:product_detail' product.slug %}">
-                    <img src="{{ product.image.url }}" alt="">
+                <a href="#">
+                    <img src="{{ product.image_4.url }}" alt="" onclick="image3()" id="image3">
                 </a>
-                <a href="{% url 'catalog:product_detail' product.slug %}">
-                    <img src="{{ product.image.url }}" alt="">
+                <a href="#">
+                    <img src="{{ product.image_4.url }}" alt="" onclick="image4()" id="image4">
                 </a>
             </div>
         </div>
         
+        <script>
+            function image1() {
+                let main = document.getElementById("image").src;
+                document.getElementById("image").src = document.getElementById("image1").src;
+                document.getElementById("image1").src = main;
+            }
+            function image2() {
+                let main = document.getElementById("image").src;
+                document.getElementById("image").src = document.getElementById("image2").src;
+                document.getElementById("image2").src = main;
+            }
+            function image3() {
+                let main = document.getElementById("image").src;
+                document.getElementById("image").src = document.getElementById("image3").src;
+                document.getElementById("image3").src = main;
+            }
+            function image4() {
+                let main = document.getElementById("image").src;
+                document.getElementById("image").src = document.getElementById("image4").src;
+                document.getElementById("image4").src = main;
+            }
+        </script>
+
         <div class="product-info">
             <h3>{{ product.title }}</h3>
             <div class="product-info-compos">
-                <p>Состав:</p>
+                <p>Состав: {{ product.compound }}</p>
                 <p class='product-info-compos-price'>₽ {{ product.price }}</p>
                 <div class="product-info-compos-chars">
-                    <p>Размер изделия: 20*100*100</p>
-                    <p>Состав: Тубус</p>
-                    <p>Состав: 22*12</p>
+                    <p>Размер изделия: {{ product.size }}</p>
+                    <p>Упаковка: {{ product.package }}</p>
+                    <p>Размер упаковки: {{ product.size_of_package }}</p>
                 </div>
             </div>
             <div class="product-info-order">
