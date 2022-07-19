@@ -14,7 +14,7 @@
     
     <div class="product">
         <div class="product-images">
-            <img src="{{ product.image.url }}" alt="" id="image">
+            <img src="{{ product.image.url }}" height="360" width="360" alt="" id="image">
             <div class="product-images-bottom">
                 <img src="{{ product.image.url }}" height="79" width="79" alt="">
                 <img src="{{ product.image.url }}" height="79" width="79" alt="">
@@ -49,15 +49,10 @@
         <div class="product-info">
             <h2>{{ product.title }}</h2>
             <div class="product-info-compos">
-<<<<<<< HEAD
                 <p>Состав:</p>
                 <p class='product-info-compos-price'>
                     <span>&#8381</span> {{ product.price }}
                 </p>
-=======
-                <p>Состав: {{ product.compound }}</p>
-                <p class='product-info-compos-price'>₽ {{ product.price }}</p>
->>>>>>> f9968d2d5acc0d51b8e697f591b938b5963134a7
                 <div class="product-info-compos-chars">
                     <p>Размер изделия: {{ product.size }}</p>
                     <p>Упаковка: {{ product.package }}</p>

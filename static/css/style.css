@@ -633,11 +633,6 @@ hr.product-line {
     margin: 32px 0;
 }
 
-.product-images > img {
-    width: 90%;
-    height: auto;
-}
-
 .product-images-bottom {
     display: flex;
     padding: 20px;
