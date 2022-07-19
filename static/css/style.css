@@ -1100,3 +1100,40 @@ button.cart-cost-pay:active {
     justify-content: right;
     align-items:flex-end;
 }
+
+.partners-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 32px;
+}
+.partners-detail-item .partners-detail-item-body{
+    width: 100%;
+    max-width: 250px;
+    margin: auto;
+    font-family: 'DINPro-CondensedMedium', "Segoe UI", Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 24px;
+    color: #569192;
+}
+.partners-detail-item img{
+    width: 100%!important;
+    height: auto;
+}
+.partners-detail-item p{
+    height: 24px;
+    font-weight: bold;
+}
+.partners-description {
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+.partners-link {
+    background: #E6E7E9;
+}
+.partners-link a {
+    color: #569192!important;
+}
+.partners-link a:hover{
+    color: #569192!important;
+    text-decoration: underline;
+}
