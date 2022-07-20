@@ -638,6 +638,10 @@ hr.product-line {
     margin-left: -20px;
 }
 
+.product-images-bottom:hover {
+    cursor: pointer;
+}
+
 .product-images-bottom img:not(:last-child) {
     margin-right: 15px;
 }
