@@ -3,7 +3,7 @@
 {% block content %}
 
     <div class="container-fluid-cart">
-        <h2 class="title-of-page">
+        <h2 class="title-of-page-cart">
             Оформление заказа
         </h2>
         <form action="{% url 'pay' %}" method='post'>
@@ -67,7 +67,7 @@
                                         {{ item.quantity }}
                                     </div>
                                     <div class="order-cost-item cost">
-                                        ₽ {{ item.total_price }}
+                                        <span class="cart-price-ruble">&#8381</span> {{ item.total_price }}
                                     </div>
                                 <!-- </div> -->
                             {% endwith %}
@@ -79,13 +79,13 @@
                                 Подытог
                             </div>
                             <div class="order-cost-item cost">
-                                ₽ {{ cart.get_total_price }}
+                                <span class="cart-price-ruble">&#8381</span> {{ cart.get_total_price }}
                             </div>
                             <div class="order-cost-item bold">
                                 Итого
                             </div>
                             <div class="order-cost-item bold cost">
-                                ₽ {{ cart.get_total_price }}
+                                <span class="cart-sum-ruble">&#8381</span> {{ cart.get_total_price }}
                             </div>
                         <!-- </div> -->
                         <div class="confirm-order">

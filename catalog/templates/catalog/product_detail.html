@@ -6,43 +6,61 @@
         <li class="">
             <a class="product-top-link" href="{% url 'catalog:catalog' %}">КАТАЛОГ</a>
         </li>
-        <p class="product-top-current">| {{ product.category.name }}</p>
+        <p class="product-top-sep"></p>
+        <p class="product-top-current">{{ product.category.name }}</p>
     </div>
 
     <hr class="product-line">
     
     <div class="product">
         <div class="product-images">
-            <img src="{{ product.image.url }}" alt="">
+            <img src="{{ product.image.url }}" height="360" width="360" alt="" id="image">
             <div class="product-images-bottom">
-                <a href="{% url 'catalog:product_detail' product.slug %}">
-                    <img src="{{ product.image.url }}" alt="">
-                </a>
-                <a href="{% url 'catalog:product_detail' product.slug %}">
-                    <img src="{{ product.image.url }}" alt="">
-                </a>
-                <a href="{% url 'catalog:product_detail' product.slug %}">
-                    <img src="{{ product.image.url }}" alt="">
-                </a>
-                <a href="{% url 'catalog:product_detail' product.slug %}">
-                    <img src="{{ product.image.url }}" alt="">
-                </a>
+                <img src="{{ product.image_2.url }}" height="79" width="79" alt="" id="image1" onclick="image1()">
+                <img src="{{ product.image_3.url }}" height="79" width="79" alt="" id="image2" onclick="image2()">
+                <img src="{{ product.image_4.url }}" height="79" width="79" alt="" id="image3" onclick="image3()">
+                <img src="{{ product.image_5.url }}" height="79" width="79" alt="" id="image4" onclick="image4()">
             </div>
         </div>
         
+        <script>
+            function image1() {
+                let main = document.getElementById("image").src;
+                document.getElementById("image").src = document.getElementById("image1").src;
+                document.getElementById("image1").src = main;
+            }
+            function image2() {
+                let main = document.getElementById("image").src;
+                document.getElementById("image").src = document.getElementById("image2").src;
+                document.getElementById("image2").src = main;
+            }
+            function image3() {
+                let main = document.getElementById("image").src;
+                document.getElementById("image").src = document.getElementById("image3").src;
+                document.getElementById("image3").src = main;
+            }
+            function image4() {
+                let main = document.getElementById("image").src;
+                document.getElementById("image").src = document.getElementById("image4").src;
+                document.getElementById("image4").src = main;
+            }
+        </script>
+
         <div class="product-info">
-            <h3>{{ product.title }}</h3>
+            <h2>{{ product.title }}</h2>
             <div class="product-info-compos">
                 <p>Состав:</p>
-                <p class='product-info-compos-price'>₽ {{ product.price }}</p>
+                <p class='product-info-compos-price'>
+                    <span>&#8381</span> {{ product.price }}
+                </p>
                 <div class="product-info-compos-chars">
-                    <p>Размер изделия: 20*100*100</p>
-                    <p>Состав: Тубус</p>
-                    <p>Состав: 22*12</p>
+                    <p>Размер изделия: {{ product.size }}</p>
+                    <p>Упаковка: {{ product.package }}</p>
+                    <p>Размер упаковки: {{ product.size_of_package }}</p>
                 </div>
             </div>
             <div class="product-info-order">
-                <h4>Доступно для предзаказа</h4>
+                <h2>Доступно для предзаказа</h2>
                 <form action="{% url 'cart:cart_add' product.id %}" method="post">
                     <div class="product-info-order-add-cart">
                         <p id="w">{{ cart_product_form }}</p>

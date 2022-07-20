@@ -3,7 +3,7 @@
 {% block content %}
 
     <div class="container-fluid-cart">
-        <h1 class="title-of-page">Ваш заказ</h1>
+        <h1 class="title-of-page-cart">Ваш заказ</h1>
         <div class="cart-adaptive">
             <div class="cart-item-container">
                 <div class="cart-items">
@@ -29,7 +29,7 @@
                         {% with product=item.product %}
                             <div class="cart-block cancel cart-block-text">
                                 <button>
-                                    < <!-- ссылка на товар -->
+                                    <<!-- ссылка на товар -->
                                 </button>
                             </div>
                             <div class="cart-block cart-item-ico">
@@ -39,7 +39,7 @@
                                 {{ item.product.title }}
                             </div>
                             <div class="cart-block cart-item-price cart-block-text">
-                                ₽ {{ item.price }} <!-- Цена -->
+                                <span class="cart-price-ruble">&#8381</span>{{ item.price }} <!-- Цена -->
                             </div>
                             <div class="cart-block cart-item-price cart-item-quantity">
                                 <input type="text" value="{{ item.quantity }}">  
@@ -47,7 +47,7 @@
                                 <!-- Должно изменяться -->
                             </div>
                             <div class="cart-block cart-item-totalprice cart-block-text">
-                                ₽ {{ item.total_price }} <!-- Подитог -->
+                                <span class="cart-sum-ruble">&#8381</span> {{ item.total_price }} <!-- Подитог -->
                             </div>
                         {% endwith %}
                     {% endfor %}
@@ -63,10 +63,10 @@
                 <div class="cart-cost-items">
                     <div class="cart-cost-block">
                         <div class="cart-cost-item">
-                            Стоимость
+                            Подытог
                         </div>
                         <div class="cart-cost-item">
-                            ₽ 0.00
+                            <span class="cart-price-ruble">&#8381</span> 0.00
                         </div>
                     </div>
                     <div class="cart-cost-block bold">
@@ -74,11 +74,11 @@
                             Итого
                         </div>
                         <div class="cart-cost-item">
-                            ₽ 0.00
+                            <span class="cart-sum-ruble">&#8381</span> 0.00
                         </div>
                     </div>
                     <button class="cart-cost-pay">
-                        ОПЛАТИТЬ
+                        Оформить заказ
                     </button>
                 </div>
             </div>
