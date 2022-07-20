@@ -3,8 +3,7 @@
     margin: 0;
     text-decoration: none;
     list-style-type: none;
-    font-family: 'Akrobat', sans-serif;
-    font-stretch: ultra-condensed;
+    font-family: "DINPro-CondensedMedium";
 }
 
 @import url('http://fonts.cdnfonts.com/css/akrobat');
@@ -12,7 +11,6 @@
 /* @font-face {     
     src: url("../fonts/bf27039ecba4e6511abddd84122a8aac.eot") format("truetype");
 } */
-
 @font-face { 
     font-family: "DINPro-CondensedMedium";
     src: url("../fonts/DINProCondensedRegular/DINProCondensedRegular.eot");
@@ -99,12 +97,10 @@
 
 .number {
     font-weight: 550;
-    font-family: "DINPro-CondensedMedium";
 }
 
 .text-top {
     font-weight: 100;
-    font-family: "DINPro-CondensedMedium";
 }
 
 
@@ -400,7 +396,7 @@
 
 .menu-link {
     color: #939598;
-    font-size: 20px;
+    font-size: 23px;
 }
 
 .menu-link:hover {
@@ -455,7 +451,6 @@
     color: #636363;     
     font-weight: 100;
     text-align: center;
-    font-family: "DINPro-CondensedMedium";
     margin-bottom: 10px;
     margin-top: 50px;
     font-size: 28px;
@@ -464,11 +459,20 @@
 .title-of-page{
     color: #6C6D70;     
     font-weight: bold;
-    font-family: "DINPro-CondensedMedium";
     font-size: 35px;
     text-transform: uppercase;
     text-align: center;
     margin-top: 40px;
+}
+
+.title-of-page-cart{
+    color: #569192;     
+    font-weight: bold;
+    font-size: 35px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .works-main-block {
@@ -489,8 +493,8 @@
 .category-name {
     width: 270px;     
     font-weight: 500;
-    font-size: 23px;
-    margin-top: 15px;
+    font-size: 27px;
+    margin-top: 10px;
     color: #409a9b;
 }
 
@@ -548,17 +552,11 @@
     margin-bottom: 50px;
 }
 
-.product-title {
-    width: 270px;     
-    font-weight: 500;
-    font-size: 25px;
-    padding-top: 10px;
-    padding-bottom: 6px;
-    color: #409a9b;
-}
-
 .product-price {
-    padding-bottom: 10px;
+    font-family: "Akrobat", sans-serif;
+    font-stretch: ultra-condensed;
+    padding-top: 7px;
+    padding-bottom: 9px;
     width: 270px;     
     font-weight: 500;
     font-size: 20px;
@@ -567,10 +565,12 @@
 
 .product-price span {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 23px;
+    font-size: 24px;
 }
 
 .add-to-cart {
+    font-family: "Akrobat", sans-serif;
+    font-stretch: ultra-condensed;
     background-color: #569192;
     border: 0 none;
     width: 110px;
@@ -628,7 +628,6 @@ hr.product-line {
 .product {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    font-family: 'DINPro-CondensedMedium', "Segoe UI", Arial, Helvetica, sans-serif;
     font-size: 24px;
     margin: 32px 0;
 }
@@ -651,6 +650,8 @@ hr.product-line {
     font-size: 37px;
     color: #569192;
     font-weight: normal;
+    font-family: "Akrobat", sans-serif;
+    font-stretch: ultra-condensed;
 }
 
 .product-info-compos {
@@ -666,6 +667,8 @@ hr.product-line {
 .product-info-compos-price {
     font-size: 32px;
     color: #569192;
+    font-family: "Akrobat", sans-serif;
+    font-stretch: ultra-condensed;
 }
 
 .product-info-compos-price span {
@@ -676,13 +679,17 @@ hr.product-line {
 .product-info-compos-chars p {
     font-size: 22px;
     color: #6C6D70;
+    font-family: "Akrobat", sans-serif;
+    font-stretch: ultra-condensed;
 }
 
 .product-info-order h2 {
-    font-size: 27px;
+    font-size: 25px;
     margin: 18px auto;
     color: #569192;
     font-weight: 600;
+    font-family: "Akrobat", sans-serif;
+    font-stretch: ultra-condensed;
 }
 
 
@@ -701,6 +708,8 @@ hr.product-line {
     font-size: 21px;
     transition: 0.3s;
     cursor: pointer;
+    font-family: "Akrobat", sans-serif;
+    font-stretch: ultra-condensed;
 }
 
 .product-info-add-cart-btn:hover {
@@ -822,7 +831,21 @@ hr.product-line {
     width: 100%;
     display: grid;
     grid-template-columns: 50px 72px 1fr 150px 100px 150px;
-    font-size: 18px;
+    font-size: 22px;
+}
+
+.cart-price-ruble {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 200;
+    font-size: 22px;    
+    margin-right: 3px;
+}
+
+.cart-sum-ruble {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 27px;
+    font-weight: 500;
+    margin-right: 2px;
 }
 
 .cart-item{
@@ -860,7 +883,7 @@ hr.product-line {
     width: 100%;
     height: 100%;
     font-family: 'DINPro-CondensedMedium', "Segoe UI", Arial, Helvetica, sans-serif;
-    font-size: 24px;
+    font-size: 30px;
 }
 .cart-items .cancel button:hover {
     border: 1px solid rgb(202, 202, 202);
@@ -877,11 +900,10 @@ hr.product-line {
 }
 .cart-items .cart-item-quantity {
     padding: 12px;
-    
 }
 .cart-items .cart-item-title {
     font-family: 'DINPro-CondensedMedium', "Segoe UI", Arial, Helvetica, sans-serif;
-    font-size: 24px;
+    font-size: 26px;
 }
 .cart-items .cart-item-quantity input  {
     width: 100%;
@@ -894,7 +916,7 @@ hr.product-line {
     border-left: 0;
     border-right: 0;
     border-radius: 6px;
-    font-size: 18px;
+    font-size: 21px;
     height: 36px;
 
 }
@@ -917,14 +939,16 @@ hr.product-line {
     display: flex;
     justify-content: space-between;
     margin: 16px 0;
+    font-size: 22px;
 }
+
 .cart-cost-block.bold {
     font-weight: bold;
-    font-size:x-large;
+    font-size: 27px;
 }
 button.cart-cost-pay {
     width: 100%;
-    padding: 16px 0;
+    padding: 4px 0;
     margin: 8px 0;
     background: #166316;
     color: #ffffff;
@@ -932,8 +956,8 @@ button.cart-cost-pay {
     border: none;
     border-radius: 3px;
     font-family: 'DINPro-CondensedMedium', "Segoe UI", Arial, Helvetica, sans-serif;
-    font-size: 24px;
-    text-transform: uppercase;
+    font-size: 22px;
+    cursor: pointer;
 }
 button.cart-cost-pay:hover {
     background: #1f811f;
@@ -944,7 +968,7 @@ button.cart-cost-pay:active {
 .update-cart {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     margin: 16px 0;
 }
 .update-cart button{
@@ -953,6 +977,7 @@ button.cart-cost-pay:active {
     color: rgba(0, 0, 0, 0.671);
     background-color: rgb(241, 241, 241);
     padding: 8px 16px;
+    font-size: 18px;
 }
 .update-cart button:hover {
     background-color: rgb(233, 233, 233);
@@ -962,8 +987,7 @@ button.cart-cost-pay:active {
 }
 
 .contacts-block {
-    font-family: 'DINPro-CondensedMedium', "Segoe UI", Arial, Helvetica, sans-serif;
-    font-size: 21px;
+    font-size: 23px;
     width: 100%;
     margin: 0 auto;
 }
@@ -992,7 +1016,7 @@ button.cart-cost-pay:active {
     display: grid;
     grid-template-columns: 2fr 1.5fr;
     font-family: 'DINPro-CondensedMedium', "Segoe UI", Arial, Helvetica, sans-serif;
-    font-size: 22px;
+    font-size: 25px;
     margin: 40px 0;
 }
 
@@ -1019,7 +1043,7 @@ button.cart-cost-pay:active {
     font-family: "Segoe UI", Arial, Helvetica, sans-serif;
     display: grid;
     grid-template-columns: 1.5fr 1fr;
-    font-size: 24px;
+    font-size: 29px;
 }
 .order-form h3 {
     padding: 8px 16px;
@@ -1040,7 +1064,7 @@ button.cart-cost-pay:active {
 }
 .order-input p{
     font-family: "Segoe UI", Arial, Helvetica, sans-serif;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: bold;
     color: gray;
     box-sizing: border-box;
@@ -1118,10 +1142,11 @@ button.cart-cost-pay:active {
 
 .order-cost-item {
     margin: 4px 0;
+    font-size: 22px;
 }
 .order-cost-item.bold {
     font-weight: bold;
-    font-size:x-large;
+    font-size: 27px;
 }
 .order-cost-item.cost {
     display: flex;
@@ -1140,7 +1165,7 @@ button.cart-cost-pay:active {
     margin: auto;
     font-family: 'DINPro-CondensedMedium', "Segoe UI", Arial, Helvetica, sans-serif;
     text-align: center;
-    font-size: 21px;
+    font-size: 23px;
     color: #569192;
 }
 .partners-detail-item img{
@@ -1152,7 +1177,7 @@ button.cart-cost-pay:active {
     font-weight: bold;
 }
 .partners-description {
-    font-size: 20px;
+    font-size: 23px;
     margin-top: 25px;
     padding-bottom: 25px;
     text-align: center;
