@@ -4,20 +4,6 @@
     <!-- Большой блок -->
     <!-- <div class="big-home-block"></div> -->
     
-    <!-- <div class="wrap">
-        <div class="slider-container">
-            <div class="slider-track">
-                <div class="slider-item"></div>
-                <div class="slider-item"></div>
-                <div class="slider-item"></div>
-                 <div class="slider-item"></div>
-                <div class="slider-item"></div>
-                <div class="slider-item"></div>
-                
-            </div>
-        </div>
-    </div> -->
-    
     <script src="{% static 'js/chief-slider.js' %}"></script>
     <div class="slider">
       <div class="slider__wrapper">
@@ -30,6 +16,13 @@
                 </div>
             {% endfor %}
         </div>
+        <a href="#" class="slider__control" data-slide="prev"></a>
+        <a href="#" class="slider__control" data-slide="next"></a>
+        <ol class="slider__indicators">
+            {% for img in slider %}
+                <li data-slide-to="{{img.id}}"></li>
+            {% endfor %}
+        </ol>
       </div>
     </div>
     
