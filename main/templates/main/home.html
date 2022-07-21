@@ -3,10 +3,22 @@
 {% block big_block %}
     <!-- Большой блок -->
     <!-- <div class="big-home-block"></div> -->
-    <div class="wrapper">
-        <div class="slider-container">
-            <!-- Слайдер -->
+    
+    <!-- Слайдер -->
+    
+    <script src="{% static 'js/chief-slider.js' %}"></script>
+    <div class="slider">
+      <div class="slider__wrapper">
+        <div class="slider__items">
+            {% for img in slider %}
+                <div class="slider__item">
+                    <div class="slider-content">
+                        <img src=" {{ img.image.url }}" alt="">
+                    </div>
+                </div>
+            {% endfor %}
         </div>
+      </div>
     </div>
     
 {% endblock %}
